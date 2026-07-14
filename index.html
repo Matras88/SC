@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scancoming — Destination Management since 1977</title>
+<meta name="description" content="Scancoming is a locally-based destination management company arranging corporate meetings, incentives, tours and event tickets across the UK, Ireland and Benelux since 1977." />
+<link rel="canonical" href="https://www.scancoming.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Scancoming" />
+<meta property="og:title" content="Scancoming — Destination Management since 1977" />
+<meta property="og:description" content="Your locally-based DMC for meetings, incentives, tours and tickets across the UK, Ireland and Benelux. One brief, one regional contact." />
+<meta property="og:url" content="https://www.scancoming.com/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:image" content="https://www.scancoming.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Scancoming — destination management since 1977 across the UK, Ireland and Benelux" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Scancoming — Destination Management since 1977" />
+<meta name="twitter:description" content="Your locally-based DMC for meetings, incentives, tours and tickets across the UK, Ireland and Benelux." />
+<meta name="twitter:image" content="https://www.scancoming.com/assets/og-image.png" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#20303f" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233D5A80'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23E0FBFC'%3ES%3C/text%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Scancoming",
+  "url": "https://www.scancoming.com/",
+  "description": "Destination management company for the UK, Ireland and Benelux, established 1977. Corporate meetings, incentives, tailor-made tours, city breaks and event tickets.",
+  "foundingDate": "1977",
+  "email": "hello@scancoming.com",
+  "logo": "https://www.scancoming.com/assets/apple-touch-icon.png",
+  "image": "https://www.scancoming.com/assets/og-image.png",
+  "areaServed": ["GB", "IE", "BE", "NL", "LU"],
+  "knowsAbout": ["Destination management", "Corporate meetings", "Incentive travel", "City breaks", "Event tickets"],
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "UK office (London)", "telephone": "+44-20-7935-0101", "email": "uk@scancoming.com", "areaServed": "GB" },
+    { "@type": "ContactPoint", "contactType": "Ireland office (Dublin)", "telephone": "+353-1-871-9404", "email": "ireland@scancoming.com", "areaServed": "IE" },
+    { "@type": "ContactPoint", "contactType": "Benelux office (Brussels)", "telephone": "+32-470-29-74-98", "email": "benelux@scancoming.com", "areaServed": ["BE","NL","LU"] }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Newsreader:ital,opsz,wght@1,18..72,400;1,18..72,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   SCANCOMING — design tokens
+   ============================================================ */
+:root{
+  --ink:        #293241;
+  --ink-2:      #3b4757;
+  --ink-soft:   #5e6b7a;
+  --blue:       #3D5A80;
+  --blue-bright:#4a6c97;
+  --blue-deep:  #2b425f;
+  --blue-night: #20303f;
+  --sky:        #98C1D9;
+  --sky-soft:   #d6e9f1;
+  --paper:      #f0f8fa;
+  --paper-2:    #E0FBFC;
+  --amber:      #EE6C4D;
+  --amber-deep: #d9543a;
+  --line:       #d4e2e9;
+  --line-soft:  #e7f0f4;
+  --white:      #ffffff;
+
+  --maxw: 1240px;
+  --pad: clamp(20px, 5vw, 64px);
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 9px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --shadow-sm: 0 1px 2px oklch(0.4 0.05 256 / .06), 0 2px 8px oklch(0.4 0.05 256 / .05);
+  --shadow-md: 0 8px 24px oklch(0.35 0.06 256 / .10), 0 2px 6px oklch(0.35 0.06 256 / .06);
+  --shadow-lg: 0 24px 60px oklch(0.3 0.07 258 / .22);
+
+  --f-display:"Hanken Grotesk", system-ui, sans-serif;
+  --f-serif:"Newsreader", Georgia, serif;
+  --f-mono:"Space Mono", ui-monospace, monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:var(--f-display);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.5;
+  letter-spacing:-0.01em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--blue);color:#fff;}
+
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);}
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:12px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--blue);
+  display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--blue);opacity:.6;}
+.eyebrow.center::before{display:none;}
+
+h1,h2,h3{line-height:1.05;letter-spacing:-0.03em;font-weight:800;}
+.serif-accent{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-0.01em;color:var(--blue);}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:600;font-size:15px;letter-spacing:-0.01em;
+  padding:14px 24px;border-radius:100px;
+  transition:transform .35s var(--ease), background .25s var(--ease), box-shadow .35s var(--ease), color .25s var(--ease);
+  cursor:pointer;border:1px solid transparent;white-space:nowrap;
+}
+.btn .arr{transition:transform .35s var(--ease);display:inline-block;}
+.btn:hover .arr{transform:translateX(4px);}
+.btn-primary{background:var(--ink);color:var(--white);box-shadow:var(--shadow-sm);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);background:var(--blue-night);}
+.btn-amber{background:var(--amber);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(238,108,77,.32);}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(238,108,77,.42);background:var(--amber-deep);color:#fff;}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);}
+.btn-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.28);backdrop-filter:blur(6px);}
+.btn-light:hover{background:#fff;color:var(--ink);transform:translateY(-2px);}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:oklch(0.987 0.005 240 / .82);
+  backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid var(--line-soft);
+  box-shadow:0 1px 0 oklch(1 0 0 / .5);
+  transition:box-shadow .4s var(--ease);
+}
+.header.scrolled{
+  box-shadow:0 6px 24px oklch(0.35 0.06 256 / .08), 0 1px 0 oklch(1 0 0 / .5);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:78px;}
+.brand{display:flex;align-items:center;gap:13px;}
+.brand-mark{
+  flex:none;display:flex;align-items:flex-end;gap:2px;
+  background:transparent;padding:0;
+}
+.brand-mark svg{height:40px;width:auto;display:block;}
+.brand-figs{display:flex;align-items:flex-end;gap:2px;}
+.brand-text{display:flex;flex-direction:column;line-height:1;}
+.brand-name{font-weight:800;font-size:20px;letter-spacing:0.01em;color:var(--ink);transition:color .4s var(--ease);}
+.brand-sub{font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px;transition:color .4s var(--ease);}
+
+.nav{display:flex;align-items:center;gap:6px;}
+.nav a.navlink{
+  padding:9px 14px;border-radius:9px;font-weight:500;font-size:14.5px;white-space:nowrap;
+  color:var(--ink-2);transition:color .25s, background .25s;position:relative;
+}
+.header:not(.scrolled) .nav a.navlink{color:var(--ink-2);}
+.nav a.navlink:hover{background:oklch(0.55 0.12 250 / .1);color:var(--blue);}
+.nav-cta{margin-left:10px;}
+.menu-btn{display:none;}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  color:#fff;overflow:hidden;background:var(--blue-night);
+  padding-bottom:clamp(64px,10vh,110px);padding-top:150px;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, oklch(0.24 0.08 260 / .72) 0%, oklch(0.24 0.08 260 / .35) 38%, oklch(0.2 0.07 262 / .82) 100%),
+    linear-gradient(105deg, oklch(0.26 0.1 258 / .6), transparent 60%);
+}
+/* duotone placeholder "photo" — abstract skyline horizon, no detailed svg */
+.hero-photo{
+  position:absolute;inset:-8% -2% -2% -2%;
+  background:
+    radial-gradient(120% 90% at 78% 12%, rgba(152,193,217,0.85), transparent 55%),
+    radial-gradient(90% 80% at 12% 0%, rgba(61,90,128,0.85), transparent 60%),
+    linear-gradient(180deg, #3D5A80 0%, #2c425f 55%, #20303f 100%);
+  will-change:transform;
+}
+.hero-photo .skyline{position:absolute;left:0;right:0;bottom:0;height:42%;opacity:.5;mix-blend-mode:soft-light;}
+.hero-grain{position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");}
+.hero-photo-tag{
+  position:absolute;top:118px;right:var(--pad);z-index:3;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+  color:oklch(0.92 0.03 236 / .8);border:1px solid rgba(255,255,255,.22);
+  padding:7px 12px;border-radius:100px;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);
+  display:flex;align-items:center;gap:8px;
+}
+.hero-photo-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber);}
+
+.hero-inner{position:relative;z-index:2;width:100%;}
+.hero-inner .wrap{display:flex;flex-direction:column;}
+.hero-eyebrow{color:var(--sky);}
+.hero-eyebrow::before{background:var(--sky);}
+.hero h1{
+  font-size:clamp(34px,5.4vw,72px);font-weight:800;letter-spacing:-0.035em;line-height:1.05;
+  max-width:15ch;margin-top:22px;text-wrap:balance;
+}
+.hero h1 .serif-accent{color:var(--sky);}
+.hero-sub{
+  font-size:clamp(16px,1.6vw,20px);font-weight:400;color:oklch(0.93 0.02 236);
+  max-width:50ch;margin-top:24px;line-height:1.55;letter-spacing:-0.005em;
+}
+.hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+.hero-meta{
+  display:flex;gap:34px;flex-wrap:wrap;margin-top:54px;
+  padding-top:30px;border-top:1px solid rgba(255,255,255,.16);
+}
+.hero-meta .hm{display:flex;flex-direction:column;gap:4px;}
+.hero-meta .hm b{font-size:26px;font-weight:700;letter-spacing:-0.02em;}
+.hero-meta .hm span{font-family:var(--f-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.84 0.03 236);}
+
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  font-family:var(--f-mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,.6);
+  display:flex;flex-direction:column;align-items:center;gap:9px;}
+.scroll-hint .line{width:1px;height:30px;background:linear-gradient(rgba(255,255,255,.5),transparent);animation:drop 2s var(--ease) infinite;transform-origin:top;}
+@keyframes drop{0%{transform:scaleY(0);opacity:0;}40%{transform:scaleY(1);opacity:1;}100%{transform:scaleY(1) translateY(8px);opacity:0;}}
+
+/* ============================================================
+   CREDIBILITY STRIP (marquee)
+   ============================================================ */
+.strip{background:var(--ink);color:#fff;overflow:hidden;}
+.strip-track{display:flex;gap:0;width:max-content;animation:marquee 38s linear infinite;}
+.strip:hover .strip-track{animation-play-state:paused;}
+.strip-item{display:flex;align-items:center;gap:16px;padding:20px 34px;white-space:nowrap;}
+.strip-item span{font-size:16px;font-weight:500;color:oklch(0.9 0.02 236);}
+.strip-item b{font-weight:700;color:#fff;}
+.strip-item .dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex:none;}
+@keyframes marquee{to{transform:translateX(-50%);}}
+
+/* ============================================================
+   SECTION shell
+   ============================================================ */
+.section{padding-block:clamp(72px,11vh,140px);position:relative;}
+.section-head{max-width:760px;margin-bottom:clamp(40px,6vh,68px);}
+.section-head.center{margin-inline:auto;text-align:center;}
+.section-head h2{font-size:clamp(32px,4.6vw,56px);margin-top:18px;letter-spacing:-0.035em;line-height:1.07;text-wrap:balance;}
+.section-head p{font-size:clamp(17px,1.8vw,19px);color:var(--ink-soft);margin-top:20px;line-height:1.6;max-width:60ch;}
+.section-head.center p{margin-inline:auto;}
+
+/* ============================================================
+   VALUE / FULL-SERVICE
+   ============================================================ */
+.value{background:var(--white);}
+.value-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(36px,5vw,80px);align-items:center;}
+.value-lead{font-size:clamp(24px,3vw,36px);font-weight:600;letter-spacing:-0.03em;line-height:1.22;text-wrap:balance;}
+.value-lead .serif-accent{display:inline;}
+.value-body{font-size:18px;color:var(--ink-soft);margin-top:26px;line-height:1.65;max-width:46ch;}
+.value-steps{display:flex;flex-direction:column;gap:14px;margin-top:6px;}
+.vstep{
+  display:flex;gap:20px;padding:22px;border-radius:var(--r-md);background:var(--paper);
+  border:1px solid var(--line-soft);transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+}
+.vstep:hover{transform:translateX(6px);box-shadow:var(--shadow-md);border-color:var(--sky);}
+.vstep-num{font-family:var(--f-mono);font-size:13px;font-weight:700;color:var(--blue);flex:none;padding-top:3px;}
+.vstep h4{font-size:18px;font-weight:700;letter-spacing:-0.02em;}
+.vstep p{font-size:15px;color:var(--ink-soft);margin-top:6px;line-height:1.55;}
+
+/* ============================================================
+   REGIONS
+   ============================================================ */
+.regions{background:var(--paper);}
+.region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.region-card{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--ink);
+  min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;
+  color:#fff;cursor:pointer;isolation:isolate;
+  box-shadow:var(--shadow-sm);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.region-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg);}
+.region-photo{position:absolute;inset:0;z-index:-2;transition:transform .9s var(--ease);}
+.region-img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;}
+.region-card:hover .region-photo{transform:scale(1.06);}
+.region-card::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg, rgba(32,40,52,.52) 0%, rgba(32,40,52,0) 24%, rgba(32,40,52,0) 50%, rgba(25,32,42,.58) 73%, rgba(20,26,34,.94) 100%);}
+.region-tag{position:absolute;top:18px;left:18px;z-index:2;font-family:var(--f-mono);font-size:10px;letter-spacing:0.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(255,255,255,.12);backdrop-filter:blur(6px);
+  padding:6px 11px;border-radius:100px;border:1px solid rgba(255,255,255,.2);}
+.region-body{position:relative;z-index:2;padding:28px;}
+.region-body h3{font-size:30px;font-weight:800;letter-spacing:-0.03em;}
+.region-cities{font-family:var(--f-mono);font-size:11.5px;letter-spacing:0.06em;color:var(--sky);margin-top:10px;text-transform:uppercase;}
+.region-body p{font-size:14.5px;color:oklch(0.9 0.015 236);margin-top:14px;line-height:1.55;max-width:34ch;
+  max-height:0;opacity:0;overflow:hidden;transition:max-height .55s var(--ease), opacity .45s var(--ease), margin .45s var(--ease);}
+.region-card:hover .region-body p,.region-card:focus-visible .region-body p{max-height:120px;opacity:1;}
+.region-card:focus-visible{outline:3px solid var(--amber);outline-offset:3px;transform:translateY(-7px);box-shadow:var(--shadow-lg);}
+.region-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;font-size:14px;color:#fff;}
+.region-link .arr{transition:transform .35s var(--ease);}
+.region-card:hover .region-link .arr{transform:translateX(5px);}
+
+/* photo placeholder fills (duotone, no detailed art) */
+.ph{position:absolute;inset:0;}
+.ph-london{background:linear-gradient(165deg, #4a6c97, #293241);}
+.ph-ireland{background:linear-gradient(165deg, #98C1D9, #3D5A80);}
+.ph-benelux{background:linear-gradient(165deg, #3D5A80, #20303f);}
+.ph-tex{position:absolute;inset:0;opacity:.4;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.ph-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,.42);
+  border:1px dashed rgba(255,255,255,.28);padding:6px 12px;border-radius:6px;white-space:nowrap;}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services{background:var(--white);}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.service-card{
+  background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-lg);
+  padding:30px;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s, background .45s;
+  position:relative;overflow:hidden;
+}
+.service-card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--blue);transition:width .5s var(--ease);}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--sky);background:var(--white);}
+.service-card:hover::before{width:100%;}
+.service-icon{width:54px;height:54px;border-radius:15px;background:var(--sky-soft);color:var(--blue);
+  display:grid;place-items:center;margin-bottom:24px;transition:background .45s var(--ease), color .45s, transform .45s var(--ease);}
+.service-card:hover .service-icon{background:var(--blue);color:#fff;transform:rotate(-6deg) scale(1.06);}
+.service-icon svg{width:26px;height:26px;}
+.service-card h3{font-size:23px;font-weight:800;letter-spacing:-0.025em;}
+.service-card p{font-size:15px;color:var(--ink-soft);margin-top:13px;line-height:1.6;flex:1;}
+.service-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.service-tags span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);padding:5px 10px;border-radius:100px;}
+
+/* ============================================================
+   WHY  (dark band)
+   ============================================================ */
+.why{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
+.why::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:130%;z-index:0;
+  background:radial-gradient(circle at center, oklch(0.4 0.13 255 / .4), transparent 65%);}
+.why .wrap{position:relative;z-index:1;}
+.why .section-head h2{color:#fff;}
+.why .section-head p{color:oklch(0.84 0.02 236);}
+.why .eyebrow{color:var(--sky);}
+.why .eyebrow::before{background:var(--sky);}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);overflow:hidden;}
+.why-cell{background:var(--ink);padding:34px 28px;transition:background .45s var(--ease);}
+.why-cell:hover{background:var(--blue-night);}
+.why-cell .num{font-family:var(--f-mono);font-size:12px;color:var(--sky);letter-spacing:0.1em;}
+.why-cell h4{font-size:20px;font-weight:700;letter-spacing:-0.02em;margin-top:18px;}
+.why-cell p{font-size:14.5px;color:oklch(0.82 0.02 236);margin-top:11px;line-height:1.6;}
+
+/* ============================================================
+   CONTACT / OFFICES
+   ============================================================ */
+.contact{background:var(--paper);}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px;}
+.office{
+  background:var(--white);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:30px;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s;
+}
+.office:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--sky);}
+.office-flag{width:44px;height:30px;border-radius:6px;overflow:hidden;box-shadow:var(--shadow-sm);margin-bottom:20px;}
+.office-flags{display:flex;gap:7px;margin-bottom:20px;}
+.office-flags .office-flag{margin-bottom:0;transition:none;transform:none;}
+.office h3{font-size:22px;font-weight:800;letter-spacing:-0.02em;}
+.office .role{font-family:var(--f-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-top:6px;}
+.office-rows{margin-top:22px;display:flex;flex-direction:column;gap:2px;}
+.orow{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--line-soft);align-items:flex-start;}
+.orow:first-child{border-top:none;}
+.orow .ic{width:18px;color:var(--blue);flex:none;margin-top:2px;}
+.orow .ic svg{width:16px;height:16px;}
+.orow a,.orow span{font-size:14.5px;color:var(--ink-2);transition:color .2s;line-height:1.45;}
+.orow a:hover{color:var(--blue);}
+.orow .em{font-family:var(--f-mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;}
+.office-emergency{margin-top:18px;padding:13px 15px;background:rgba(238,108,77,.08);border:1px solid rgba(238,108,77,.28);
+  border-radius:10px;font-size:12.5px;color:#c24a30;display:flex;align-items:center;gap:9px;}
+.office-emergency b{font-weight:700;}
+
+.contact-cta{margin-top:46px;background:var(--ink);border-radius:var(--r-lg);padding:clamp(34px,5vw,60px);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;color:#fff;position:relative;overflow:hidden;}
+.contact-cta::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 140% at 90% 10%, oklch(0.45 0.15 252 / .55), transparent 55%);}
+.contact-cta .cc-text{position:relative;z-index:1;}
+.contact-cta h3{font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.03em;font-weight:800;line-height:1.08;}
+.contact-cta p{color:oklch(0.85 0.02 236);margin-top:12px;font-size:17px;max-width:42ch;}
+.contact-cta .cc-actions{position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.dest-select{display:flex;flex-direction:column;gap:9px;}
+.dest-label{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--powder);}
+.dest-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.dest-pill{font-family:var(--f-display);font-weight:600;font-size:14px;letter-spacing:-0.01em;color:#fff;cursor:pointer;white-space:nowrap;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);border-radius:100px;padding:9px 16px;
+  transition:background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);}
+.dest-pill:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.4);}
+.dest-pill.is-active{background:var(--white);color:var(--ink);border-color:var(--white);}
+.cc-hint{font-family:var(--f-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:oklch(0.82 0.03 236);display:flex;align-items:center;gap:8px;}
+.cc-hint::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sky);flex:none;}
+
+/* ---------- enquiry office picker (modal) ---------- */
+.enquiry-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;
+  opacity:0;visibility:hidden;transition:opacity .35s var(--ease), visibility .35s var(--ease);}
+.enquiry-modal.open{opacity:1;visibility:visible;}
+.enquiry-backdrop{position:absolute;inset:0;background:oklch(0.2 0.05 260 / .58);backdrop-filter:blur(5px);}
+.enquiry-dialog{position:relative;width:min(520px,100%);background:var(--white);border-radius:var(--r-lg);
+  padding:clamp(28px,4vw,40px);box-shadow:var(--shadow-lg);
+  transform:translateY(18px) scale(.97);transition:transform .4s var(--ease);}
+.enquiry-modal.open .enquiry-dialog{transform:none;}
+.enquiry-dialog h3{font-size:clamp(22px,2.6vw,28px);letter-spacing:-0.03em;margin-top:14px;}
+.enquiry-dialog>p{font-size:15.5px;color:var(--ink-soft);margin-top:12px;line-height:1.55;max-width:42ch;}
+.enquiry-close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink-soft);display:grid;place-items:center;cursor:pointer;font-size:20px;line-height:1;
+  transition:background .25s, color .25s, border-color .25s;}
+.enquiry-close:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.enquiry-choices{display:flex;flex-direction:column;gap:10px;margin-top:26px;}
+.enquiry-choice{display:flex;align-items:center;gap:16px;width:100%;text-align:left;cursor:pointer;
+  background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-md);padding:16px 18px;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s, background .35s;}
+.enquiry-choice:hover{transform:translateX(5px);box-shadow:var(--shadow-md);border-color:var(--sky);background:var(--white);}
+.enquiry-choice .flag{flex:none;width:40px;height:27px;border-radius:5px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;}
+.enquiry-choice .flag svg{width:100%;height:100%;}
+.enquiry-choice .flag.multi svg{width:33.34%;}
+.enquiry-choice .ec-text{flex:1;display:flex;flex-direction:column;gap:2px;}
+.enquiry-choice .ec-text b{font-size:17px;font-weight:700;letter-spacing:-0.02em;color:var(--ink);}
+.enquiry-choice .ec-text small{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);}
+.enquiry-choice .arr{color:var(--blue);font-size:18px;transition:transform .35s var(--ease);flex:none;}
+.enquiry-choice:hover .arr{transform:translateX(4px);}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:var(--blue-night);color:oklch(0.86 0.02 236);padding-top:72px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:54px;border-bottom:1px solid rgba(255,255,255,.12);}
+.footer .brand-name{color:#fff;}
+.footer .brand-sub{color:oklch(0.78 0.03 236);}
+.footer .brand-mark{background:var(--white);border-radius:12px;padding:7px 10px 5px;box-shadow:0 2px 10px oklch(0.15 0.04 260 / .3);}
+.footer-blurb{font-size:15px;color:oklch(0.8 0.02 236);margin-top:22px;max-width:38ch;line-height:1.6;}
+.footer-members{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.member-chip{font-family:var(--f-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.82 0.02 236);
+  border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:9px 13px;transition:border-color .3s, color .3s;background:rgba(255,255,255,.03);}
+.member-chip:hover{border-color:var(--sky);color:#fff;}
+.footer-col h5{font-family:var(--f-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sky);margin-bottom:20px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+.footer-col a{font-size:15px;color:oklch(0.84 0.02 236);transition:color .2s, padding .25s var(--ease);}
+.footer-col a:hover{color:#fff;padding-left:5px;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:26px;flex-wrap:wrap;}
+.footer-bottom p{font-size:13px;color:oklch(0.74 0.02 236);}
+.footer-social{display:flex;gap:10px;}
+.footer-social a{width:38px;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;
+  color:oklch(0.84 0.02 236);transition:background .3s, color .3s, transform .3s var(--ease), border-color .3s;}
+.footer-social a:hover{background:#fff;color:var(--ink);transform:translateY(-3px);border-color:#fff;}
+.footer-social svg{width:17px;height:17px;}
+
+/* ============================================================
+   reveal animation — transform-only (content always visible; never
+   depends on an opacity transition completing)
+   ============================================================ */
+.reveal{transform:translateY(30px);transition:transform .9s var(--ease);will-change:transform;}
+.reveal.in{transform:none;}
+.reveal[data-d="1"]{transition-delay:.09s;}
+.reveal[data-d="2"]{transition-delay:.18s;}
+.reveal[data-d="3"]{transition-delay:.27s;}
+@media (prefers-reduced-motion:reduce){
+  .reveal{transform:none;transition:none;}
+  .strip-track,.scroll-hint .line{animation:none;}
+  *{scroll-behavior:auto;}
+}
+
+/* ============================================================
+   MOBILE MENU DRAWER
+   ============================================================ */
+.mobile-menu{position:fixed;inset:0;z-index:130;visibility:hidden;}
+.mobile-menu .mm-backdrop{position:absolute;inset:0;background:oklch(0.2 0.05 260 / .5);
+  opacity:0;transition:opacity .35s var(--ease);backdrop-filter:blur(2px);}
+.mobile-menu .mm-panel{position:absolute;top:0;right:0;height:100%;width:min(360px,87vw);
+  background:var(--white);box-shadow:var(--shadow-lg);transform:translateX(100%);
+  transition:transform .42s var(--ease);display:flex;flex-direction:column;
+  padding:20px 22px calc(22px + env(safe-area-inset-bottom));overflow-y:auto;}
+.mobile-menu.open{visibility:visible;}
+.mobile-menu.open .mm-backdrop{opacity:1;}
+.mobile-menu.open .mm-panel{transform:none;}
+.mm-head{display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:18px;margin-bottom:10px;border-bottom:1px solid var(--line-soft);}
+.mm-head .brand-sub{font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ink-soft);}
+.mm-close{width:44px;height:44px;border-radius:11px;border:1px solid var(--line);background:var(--paper);
+  color:var(--ink);display:grid;place-items:center;cursor:pointer;font-size:24px;line-height:1;flex:none;
+  transition:background .25s, color .25s;}
+.mm-close:active{background:var(--ink);color:#fff;}
+.mm-links{display:flex;flex-direction:column;margin-top:6px;}
+.mm-links a{display:flex;align-items:center;justify-content:space-between;
+  padding:17px 6px;font-size:19px;font-weight:600;letter-spacing:-0.02em;color:var(--ink);
+  border-bottom:1px solid var(--line-soft);transition:padding .25s var(--ease), color .25s;}
+.mm-links a::after{content:"→";color:var(--blue);opacity:.5;font-size:16px;}
+.mm-links a:active{padding-left:14px;color:var(--blue);}
+.mm-cta{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:12px;}
+.mm-cta .btn{justify-content:center;width:100%;padding:16px 24px;font-size:16px;}
+.mm-contact{display:flex;flex-direction:column;gap:7px;padding-top:18px;margin-top:18px;border-top:1px solid var(--line-soft);}
+.mm-contact a{font-family:var(--f-mono);font-size:12.5px;letter-spacing:0.02em;color:var(--ink-soft);}
+.mm-contact a:active{color:var(--blue);}
+body.menu-open{overflow:hidden;}
+
+/* ============================================================
+   responsive
+   ============================================================ */
+@media (max-width:980px){
+  .value-grid{grid-template-columns:1fr;gap:44px;}
+  .region-grid,.service-grid,.contact-grid{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  .nav{display:none;}
+  .menu-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:transparent;cursor:pointer;}
+  .menu-btn svg{width:22px;height:22px;color:var(--ink);}
+  .header-inner{height:64px;}
+  .hero{padding-top:112px;min-height:auto;padding-bottom:64px;}
+  .region-grid,.service-grid,.contact-grid,.why-grid,.footer-top{grid-template-columns:1fr;}
+  .region-card{min-height:360px;}
+  .region-body p{max-height:120px;opacity:1;}
+  .hero-meta{gap:22px 30px;margin-top:40px;padding-top:26px;}
+  .hero-photo-tag{display:none;}
+  .scroll-hint{display:none;}
+  .contact-cta{flex-direction:column;align-items:flex-start;}
+  .strip-item{padding:16px 24px;}
+  .strip-item span{font-size:14.5px;}
+  .why-cell{padding:28px 24px;}
+  .service-card,.office{padding:26px;}
+}
+@media (max-width:520px){
+  .header-inner{height:60px;}
+  .brand-sub{display:none;}
+  .brand-mark svg{height:34px;}
+  .hero{padding-top:100px;}
+  .hero h1{font-size:clamp(30px,8.5vw,40px);margin-top:18px;}
+  .hero-sub{margin-top:18px;}
+  .hero-actions{margin-top:28px;gap:11px;}
+  .hero-actions .btn{flex:1 1 auto;justify-content:center;}
+  .hero-meta{gap:18px 26px;margin-top:34px;}
+  .hero-meta .hm b{font-size:22px;}
+  .section{padding-block:clamp(56px,9vh,80px);}
+  .section-head{margin-bottom:34px;}
+  .value-body{margin-top:20px;}
+  .contact-cta{padding:28px 24px;}
+  .contact-cta .cc-actions{width:100%;}
+  .contact-cta .cc-actions .btn{width:100%;justify-content:center;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:18px;}
+  .enquiry-choice{padding:14px;gap:13px;}
+  .enquiry-choice .ec-text b{font-size:16px;}
+}
+/* ---- tweak-driven density ---- */
+body[data-density="compact"] .section{padding-block:clamp(46px,7vh,92px);}
+body[data-density="comfy"] .section{padding-block:clamp(96px,14vh,188px);}
+
+/* ============================================================
+   HERO ANIMATIONS (approved set)
+   ============================================================ */
+.route-svg{position:absolute;top:0;right:0;height:100%;max-height:100svh;width:min(58vw,860px);
+  z-index:1;pointer-events:none;}
+.route-svg .path{fill:none;stroke:rgba(224,251,252,.5);stroke-width:1.7;
+  stroke-dasharray:2.5 6;stroke-linecap:round;}
+.route-svg .dot{fill:#E0FBFC;}
+.route-svg .ring{fill:none;stroke:rgba(224,251,252,.65);stroke-width:1.4;}
+.route-svg text{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.12em;
+  fill:rgba(224,251,252,.72);text-transform:uppercase;}
+.route-svg .pulse{fill:none;stroke:#E0FBFC;stroke-width:2.4;stroke-linecap:round;
+  stroke-dasharray:10 90;stroke-dashoffset:100;opacity:.9;
+  filter:drop-shadow(0 0 5px rgba(224,251,252,.85));}
+@media (max-width:980px){.route-svg{width:66vw;opacity:.55;}}
+@media (max-width:760px){.route-svg{display:none;}.aurora{display:none;}}
+
+@media (prefers-reduced-motion: no-preference){
+  .hero-eyebrow::before{animation:lineGrow 1s var(--ease) .15s backwards;}
+  @keyframes lineGrow{from{width:0;opacity:0;}}
+
+  .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em;}
+  .hero h1 .w>span{display:inline-block;transform:translateY(115%) rotate(3deg);
+    animation:wordUp .8s var(--ease) forwards;animation-delay:var(--wd,0s);}
+  @keyframes wordUp{to{transform:none;}}
+
+  .aurora{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;mix-blend-mode:screen;will-change:transform;}
+  .aurora.a1{width:46vw;height:46vw;top:-14%;right:-8%;
+    background:radial-gradient(circle,rgba(152,193,217,.5),transparent 65%);
+    animation:drift1 17s ease-in-out infinite alternate;}
+  .aurora.a2{width:36vw;height:36vw;bottom:-8%;left:-7%;
+    background:radial-gradient(circle,rgba(238,108,77,.28),transparent 60%);
+    animation:drift2 21s ease-in-out infinite alternate;}
+  @keyframes drift1{from{transform:translate(0,0) scale(1);}to{transform:translate(-6%,9%) scale(1.18);}}
+  @keyframes drift2{from{transform:translate(0,0) scale(1.05);}to{transform:translate(10%,-8%) scale(.95);}}
+
+  .route-svg .path{opacity:0;animation:fadeInAnim .9s var(--ease) forwards;}
+  .route-svg .p1{animation-delay:1.0s;}.route-svg .p2{animation-delay:1.25s;}
+  .route-svg .p3{animation-delay:1.5s;}.route-svg .p4{animation-delay:1.75s;}
+  .route-svg .city{opacity:0;animation:fadeInAnim .7s var(--ease) forwards;}
+  .route-svg .c1{animation-delay:.75s;}.route-svg .c2{animation-delay:1.0s;}
+  .route-svg .c3{animation-delay:1.25s;}.route-svg .c4{animation-delay:1.5s;}.route-svg .c5{animation-delay:1.75s;}
+  @keyframes fadeInAnim{to{opacity:1;}}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .route-svg .path,.route-svg .city{opacity:1;}
+  .route-svg .ring,.route-svg .pulse{display:none;}
+  .aurora{display:none;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== shared logo figure definitions (English gentleman · Irish violinist · Benelux waffle & tulip) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <g id="fig-gent" fill="#3D5A80" stroke="#3D5A80">
+    <path d="M55 53 q8 2 11 6" fill="none" stroke-width="6.2" stroke-linecap="round"/>
+    <path d="M70 56 q0 -7 -6 -7 q-4 0 -4 4" fill="none" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="70" cy="90" rx="4.4" ry="23" stroke="none"/>
+    <path d="M70 112 L70 150" fill="none" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="70" y1="56" x2="70" y2="68" stroke-width="3"/>
+    <path d="M35 27 q0 -11 9 -11 q9 0 9 11 z" stroke="none"/>
+    <ellipse cx="44" cy="27" rx="13" ry="2.9" stroke="none"/>
+    <circle cx="44" cy="36" r="7.2" stroke="none"/>
+    <rect x="41" y="42" width="6" height="6" stroke="none"/>
+    <path d="M33 48 q11 -5 22 0 l2.5 44 q-13.5 4 -27 0 z" stroke="none"/>
+    <path d="M33.5 90 L31 151 L40 151 L43.5 92 Z" stroke="none"/>
+    <path d="M44.5 92 L48 151 L57 151 L54.5 90 Z" stroke="none"/>
+    <path d="M28 150 h13 v2.5 q0 2 -2 2 h-13 q-2 0 -2 -2 z" stroke="none"/>
+    <path d="M47 150 h13 q4 0 4 2.5 q0 1.5 -2 1.5 h-15 z" stroke="none"/>
+  </g>
+  <g id="fig-violin" fill="#4E9D6B" stroke="#4E9D6B">
+    <path d="M40 66 h20 l10 84 q-20 8 -40 0 z" stroke="none"/>
+    <path d="M41 47 q9 -3 18 0 l1.5 21 h-21 z" stroke="none"/>
+    <path d="M42 31 q-1 -11 8 -11 q9 0 9 10 q-3 -4 -9 -4 q-6 0 -8 5 z" stroke="none"/>
+    <circle cx="50" cy="33" r="7" stroke="none"/>
+    <circle cx="59" cy="35" r="4.2" stroke="none"/>
+    <g transform="rotate(-10 43 44)">
+      <path d="M34 40 q4.4 0 4.4 4.2 q0 2.3 -1.7 3.3 q1.7 1 1.7 3.5 q0 4.4 -4.4 4.4 q-4.4 0 -4.4 -4.4 q0 -2.5 1.7 -3.5 q-1.7 -1 -1.7 -3.3 q0 -4.2 4.4 -4.2 z" stroke="none"/>
+      <rect x="22" y="43" width="12" height="2" stroke="none"/>
+      <circle cx="21" cy="44" r="2" stroke="none"/>
+    </g>
+    <path d="M44 52 q-9 -6 -18 -8" fill="none" stroke-width="5" stroke-linecap="round"/>
+    <path d="M56 50 q6 3 7 9" fill="none" stroke-width="5" stroke-linecap="round"/>
+    <path d="M40 34 L64 61" fill="none" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <g id="fig-ben" fill="#EE6C4D" stroke="#EE6C4D">
+    <path d="M35 48 q11 -5 22 0 l2.5 43 q-13.5 4 -27 0 z" stroke="none"/>
+    <path d="M35.5 90 L33 151 L42 151 L45.5 92 Z" stroke="none"/>
+    <path d="M46.5 92 L50 151 L59 151 L56.5 90 Z" stroke="none"/>
+    <path d="M30 150 h13 v2.5 q0 2 -2 2 h-13 q-2 0 -2 -2 z" stroke="none"/>
+    <path d="M49 150 h13 q4 0 4 2.5 q0 1.5 -2 1.5 h-15 z" stroke="none"/>
+    <rect x="43" y="42" width="6" height="6" stroke="none"/>
+    <circle cx="46" cy="36" r="7.2" stroke="none"/>
+    <path d="M39 34 q-1 -12 7 -12 q9 0 9 11 q-3 -4 -8 -4 q-5 0 -8 5 z" stroke="none"/>
+    <path d="M37 51 q-6 5 -7 12" fill="none" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M57 51 q7 1 10 6" fill="none" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="30" y1="63" x2="30" y2="24" stroke-width="2.6"/>
+    <path d="M30 46 q-7 -2 -9 -8 q8 0 9 6 z" stroke="none"/>
+    <path d="M24 24 q0 -9 6 -11 q6 2 6 11 q-3 -4 -6 -1 q-3 -3 -6 1 z" stroke="none"/>
+    <g transform="rotate(8 69 51)">
+      <rect x="62" y="44" width="14" height="14" rx="3.5" stroke="none"/>
+      <rect x="64.3" y="46.3" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="67.8" y="46.3" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="71.3" y="46.3" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="64.3" y="49.8" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="67.8" y="49.8" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="71.3" y="49.8" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="64.3" y="53.3" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="67.8" y="53.3" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+      <rect x="71.3" y="53.3" width="2.4" height="2.4" rx="0.6" fill="#fff" stroke="none"/>
+    </g>
+  </g>
+</svg>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Scancoming home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 100 160" aria-hidden="true"><use href="#fig-gent"/></svg>
+        <svg viewBox="0 0 100 160" aria-hidden="true"><use href="#fig-violin"/></svg>
+        <svg viewBox="0 0 100 160" aria-hidden="true"><use href="#fig-ben"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">SCANCOMING</span>
+        <span class="brand-sub">Destination Management · est. 1977</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="navlink" href="#regions">Regions</a>
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#why">Why us</a>
+      <a class="navlink" href="#offices">Offices</a>
+      <a class="btn btn-primary nav-cta" href="#offices">Contact us <span class="arr">→</span></a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============================ MOBILE MENU ============================ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mm-backdrop" data-mm-close></div>
+  <nav class="mm-panel" aria-label="Mobile">
+    <div class="mm-head">
+      <span class="brand-text">
+        <span class="brand-name" style="font-weight:800;font-size:19px;color:var(--ink);">SCANCOMING</span>
+        <span class="brand-sub">Destination Management · est. 1977</span>
+      </span>
+      <button class="mm-close" data-mm-close aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mm-links">
+      <a href="#regions" data-mm-close>Regions</a>
+      <a href="#services" data-mm-close>Services</a>
+      <a href="#why" data-mm-close>Why us</a>
+      <a href="#offices" data-mm-close>Offices</a>
+    </div>
+    <div class="mm-cta">
+      <div class="mm-contact">
+        <a href="tel:+442079350101">UK · +44 20 7935 0101</a>
+        <a href="tel:+35318719404">Ireland · +353 1 871 94 04</a>
+        <a href="tel:+32470297498">Benelux · +32 470 29 74 98</a>
+      </div>
+      <a class="btn btn-amber" href="#offices" data-mm-close>Contact us <span class="arr">→</span></a>
+    </div>
+  </nav>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-photo" id="heroPhoto">
+      <div class="hero-grain"></div>
+    </div>
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+
+    <svg class="route-svg" id="routeSvg" viewBox="770 180 580 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <!-- routes -->
+      <path class="path p1" d="M845 315 Q 935 330 1005 428"/>
+      <path class="path p2" d="M1005 428 Q 1105 375 1192 398"/>
+      <path class="path p3" d="M1192 398 Q 1200 315 1168 250"/>
+      <path class="path p4" d="M1192 398 Q 1252 440 1290 505"/>
+      <!-- light pulses relaying through the network -->
+      <path class="pulse" d="M845 315 Q 935 330 1005 428" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="2.0s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M1005 428 Q 1105 375 1192 398" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="3.1s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M1192 398 Q 1200 315 1168 250" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="4.2s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M1192 398 Q 1252 440 1290 505" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="4.2s" repeatCount="indefinite"/></path>
+      <!-- cities -->
+      <g class="city c1"><circle class="dot" cx="845" cy="315" r="4"/><circle class="ring" cx="845" cy="315" r="4"><animate attributeName="r" values="4;15" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" repeatCount="indefinite"/></circle><text x="845" y="295" text-anchor="middle">Dublin</text></g>
+      <g class="city c2"><circle class="dot" cx="1005" cy="428" r="4.6"/><circle class="ring" cx="1005" cy="428" r="4"><animate attributeName="r" values="4;16" dur="2.6s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></circle><text x="1005" y="460" text-anchor="middle">London</text></g>
+      <g class="city c3"><circle class="dot" cx="1192" cy="398" r="4.6"/><circle class="ring" cx="1192" cy="398" r="4"><animate attributeName="r" values="4;16" dur="2.6s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="1.2s" repeatCount="indefinite"/></circle><text x="1222" y="388" text-anchor="start">Brussels</text></g>
+      <g class="city c4"><circle class="dot" cx="1168" cy="250" r="4"/><circle class="ring" cx="1168" cy="250" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="1.8s" repeatCount="indefinite"/></circle><text x="1168" y="230" text-anchor="middle">Amsterdam</text></g>
+      <g class="city c5"><circle class="dot" cx="1290" cy="505" r="4"/><circle class="ring" cx="1290" cy="505" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="2.4s" repeatCount="indefinite"/></circle><text x="1290" y="535" text-anchor="middle">Luxembourg</text></g>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <span class="eyebrow hero-eyebrow reveal">UK · Ireland · Benelux</span>
+      <h1 class="reveal" data-d="1">Your people on the ground, wherever your events or trips take you.</h1>
+      <p class="hero-sub reveal" data-d="2">Scancoming is the locally-based destination management partner behind corporate meetings, incentives and tours across the UK, Ireland and Benelux. We do the research, planning and bookings — you get a single, expert point of contact.</p>
+      <div class="hero-actions reveal" data-d="3">
+        <a class="btn btn-amber" href="#offices">Contact a regional office <span class="arr">→</span></a>
+        <a class="btn btn-light" href="#services">Explore our services</a>
+      </div>
+      <div class="hero-meta reveal" data-d="3">
+        <div class="hm"><b>Since 1977</b><span>On-the-ground experts</span></div>
+        <div class="hm"><b>3 regions</b><span>EXPERIENCED STAFF</span></div>
+        <div class="hm"><b>Full service</b><span>Research to booking</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============================ STRIP ============================ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track" id="stripTrack">
+    <!-- filled by JS (duplicated for seamless loop) -->
+  </div>
+</div>
+
+<!-- ============================ VALUE ============================ -->
+<section class="section value" id="value">
+  <div class="wrap value-grid">
+    <div>
+      <span class="eyebrow reveal">The full-service promise</span>
+      <p class="value-lead reveal" data-d="1">We take the logistics off your plate — so a programme that would take you <span class="serif-accent">weeks to coordinate</span> takes one conversation with us.</p>
+      <p class="value-body reveal" data-d="2">As your locally-based travel partner, our regional experts arrange accommodation, conference spaces, tickets, restaurants and transport. Our promise: a personal service, tailor-made offers and a speedy response.</p>
+    </div>
+    <div class="value-steps">
+      <div class="vstep reveal"><div class="vstep-num">01</div><div><h4>You brief us</h4><p>Share the goal, the group and the budget. One enquiry, one regional contact — no chasing five suppliers.</p></div></div>
+      <div class="vstep reveal" data-d="1"><div class="vstep-num">02</div><div><h4>We research &amp; plan</h4><p>Local teams scout venues, negotiate rates and build a tailor-made proposal you can actually use.</p></div></div>
+      <div class="vstep reveal" data-d="2"><div class="vstep-num">03</div><div><h4>We book &amp; run it</h4><p>From contracts to on-site delivery, we manage the bookings and stay reachable — even out of hours.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ REGIONS ============================ -->
+<section class="section regions" id="regions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Where we operate</span>
+      <h2>Three regions, one team that knows them inside out.</h2>
+      <p>Local offices, local knowledge and local relationships in every market we cover — the difference between a booking and a programme that actually works.</p>
+    </div>
+    <div class="region-grid">
+
+      <a class="region-card reveal" href="#offices">
+        <div class="region-photo"><div class="ph ph-london"><div class="ph-tex"></div><span class="ph-label">Photo — London</span></div><img class="region-img" src="assets/uk-london.jpg" alt="London — Houses of Parliament and Big Ben at dusk" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">01 — United Kingdom</span>
+        <div class="region-body">
+          <h3>United Kingdom</h3>
+          <div class="region-cities">London · Edinburgh · Manchester</div>
+          <p>Event organisation, corporate meetings and tours backed by a London team and nationwide supplier network.</p>
+          <span class="region-link">Talk to our UK office <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="1" href="#offices">
+        <div class="region-photo"><div class="ph ph-ireland"><div class="ph-tex"></div><span class="ph-label">Photo — Dublin</span></div><img class="region-img" src="assets/ireland-dublin.webp" alt="Dublin — O’Connell Bridge over the River Liffey" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">02 — Ireland</span>
+        <div class="region-body">
+          <h3>Ireland</h3>
+          <div class="region-cities">Dublin · Galway · Cork</div>
+          <p>A Dublin-based team arranging incentives, city breaks and events across the island of Ireland.</p>
+          <span class="region-link">Talk to our Ireland office <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="2" href="#offices">
+        <div class="region-photo"><div class="ph ph-benelux"><div class="ph-tex"></div><span class="ph-label">Photo — Benelux</span></div><img class="region-img" src="assets/benelux-ghent.jpeg" alt="Ghent — historic guild houses along the Graslei canal" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">03 — Benelux</span>
+        <div class="region-body">
+          <h3>Benelux</h3>
+          <div class="region-cities">Brussels · Amsterdam · Luxembourg</div>
+          <p>Belgium, the Netherlands and Luxembourg — meetings, tours and tickets handled on the ground.</p>
+          <span class="region-link">Talk to our Benelux office <span class="arr">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we arrange</span>
+      <h2>From a single ticket to a multi-day incentive programme.</h2>
+      <p>Whatever the brief, the same local team handles the research, planning and bookings on your behalf.</p>
+    </div>
+    <div class="service-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 21V8l9-5 9 5v13" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="1.4" fill="currentColor"/></svg>
+        </div>
+        <h3>Meetings &amp; Incentives</h3>
+        <p>Corporate meetings, conferences and incentive travel designed end-to-end — venues, delegate logistics, programmes and the rewarding extras that make people remember it.</p>
+        <div class="service-tags"><span>Venues</span><span>Conferences</span><span>Incentives</span><span>Delegate mgmt</span></div>
+      </div>
+
+      <div class="service-card reveal" data-d="1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <h3>Tours &amp; City Breaks</h3>
+        <p>Tailor-made tours and short breaks with accommodation, transport, guides and restaurant bookings — researched locally and priced to actually work for your customers.</p>
+        <div class="service-tags"><span>Itineraries</span><span>Accommodation</span><span>Guides</span><span>Transport</span></div>
+      </div>
+
+      <div class="service-card reveal" data-d="2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 9a2 2 0 002-2V6h14v1a2 2 0 000 4v1a2 2 0 000 4v1H5v-1a2 2 0 00-2-2V9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 6v12" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 2.4"/></svg>
+        </div>
+        <h3>Tickets &amp; Events</h3>
+        <p>Access to the matches, shows and cultural events that anchor a trip — sourced through long-standing local relationships, with the seats and timings handled for you.</p>
+        <div class="service-tags"><span>Sport</span><span>Concerts</span><span>Theatre</span><span>Attractions</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY ============================ -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Scancoming</span>
+      <h2>Established since 1977</h2>
+      <p>Nearly five decades of doing one thing well: being the dependable local partner that international clients can hand the hard part to.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-cell reveal"><div class="num">01</div><h4>Local experts</h4><p>Real teams in-market who know the venues, the suppliers and the shortcuts — not a call centre reading a map.</p></div>
+      <div class="why-cell reveal" data-d="1"><div class="num">02</div><h4>Full service</h4><p>Research, planning and booking handled for you. One brief in, a finished programme out.</p></div>
+      <div class="why-cell reveal" data-d="2"><div class="num">03</div><h4>Personal &amp; fast</h4><p>Tailor-made offers and a speedy response from a named contact who owns your account.</p></div>
+      <div class="why-cell reveal" data-d="3"><div class="num">04</div><h4>Always reachable</h4><p>Emergency lines in every region for the moments that don't keep office hours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT / OFFICES ============================ -->
+<section class="section contact" id="offices">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Contact the office closest to your destination.</h2>
+      <p>One enquiry is all it takes. Reach the regional team directly — or send a brief and we'll route it to the right experts.</p>
+    </div>
+    <div class="contact-grid">
+
+      <div class="office reveal">
+        <div class="office-flag"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="7"/></svg></div>
+        <h3>Scancoming UK</h3>
+        <div class="role">London</div>
+        <div class="office-rows">
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l1 5-2.5 1.5a12 12 0 005 5L14 13l5 1v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><a href="tel:+442079350101">+44 20 7935 0101</a></div>
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span><a href="mailto:uk@scancoming.com">uk@scancoming.com</a></div>
+        </div>
+        <div class="office-emergency"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Out of hours: <b>+44 7506 555 225</b></span></div>
+      </div>
+
+      <div class="office reveal" data-d="1">
+        <div class="office-flag"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="20" height="40" fill="#169B62"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#FF883E"/></svg></div>
+        <h3>Scancoming Ireland</h3>
+        <div class="role">Dublin</div>
+        <div class="office-rows">
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l1 5-2.5 1.5a12 12 0 005 5L14 13l5 1v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><a href="tel:+35318719404">+353 1 871 94 04</a></div>
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span><a href="mailto:ireland@scancoming.com">ireland@scancoming.com</a></div>
+        </div>
+        <div class="office-emergency"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Out of hours: <b>+353 87 620 5918</b></span></div>
+      </div>
+
+      <div class="office reveal" data-d="2">
+        <div class="office-flags">
+          <div class="office-flag" title="Belgium"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="20" height="40" fill="#000"/><rect x="20" width="20" height="40" fill="#FAE042"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg></div>
+          <div class="office-flag" title="Netherlands"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="60" height="13.33" fill="#AE1C28"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#21468B"/></svg></div>
+          <div class="office-flag" title="Luxembourg"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="60" height="13.33" fill="#ED2939"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#00A1DE"/></svg></div>
+        </div>
+        <h3>Scancoming Benelux</h3>
+        <div class="role">Brussels</div>
+        <div class="office-rows">
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l1 5-2.5 1.5a12 12 0 005 5L14 13l5 1v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><a href="tel:+32470297498">+32 470 29 74 98</a></div>
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span><a href="mailto:benelux@scancoming.com">benelux@scancoming.com</a></div>
+        </div>
+        <div class="office-emergency"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Out of hours: <b>+32 470 297 498</b></span></div>
+      </div>
+
+    </div>
+
+    <div class="contact-cta reveal">
+      <div class="cc-text">
+        <h3>Have a brief? Let's get started.</h3>
+        <p>Pick your destination and send us the goal, the group and the dates. We'll come back fast with a tailor-made plan.</p>
+      </div>
+      <div class="cc-actions">
+        <button type="button" class="btn btn-amber" id="enquiryBtn">Send an enquiry <span class="arr">→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENQUIRY OFFICE PICKER ============================ -->
+<div class="enquiry-modal" id="enquiryModal" aria-hidden="true">
+  <div class="enquiry-backdrop" data-close></div>
+  <div class="enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enqTitle">
+    <button class="enquiry-close" data-close aria-label="Close">&times;</button>
+    <span class="eyebrow">One last thing</span>
+    <h3 id="enqTitle">Which office should we send this to?</h3>
+    <p>Pick the destination closest to your trip — we'll open a pre-filled email to that regional team.</p>
+    <div class="enquiry-choices">
+      <button type="button" class="enquiry-choice" data-office="uk@scancoming.com" data-region="the UK">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="7"/></svg></span>
+        <span class="ec-text"><b>United Kingdom</b><small>Scancoming UK · London</small></span>
+        <span class="arr">→</span>
+      </button>
+      <button type="button" class="enquiry-choice" data-office="ireland@scancoming.com" data-region="Ireland">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="20" height="40" fill="#169B62"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#FF883E"/></svg></span>
+        <span class="ec-text"><b>Ireland</b><small>Scancoming Ireland · Dublin</small></span>
+        <span class="arr">→</span>
+      </button>
+      <button type="button" class="enquiry-choice" data-office="benelux@scancoming.com" data-region="Benelux">
+        <span class="flag multi">
+          <svg viewBox="0 0 60 40"><rect width="20" height="40" fill="#000"/><rect x="20" width="20" height="40" fill="#FAE042"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg>
+          <svg viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#AE1C28"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#21468B"/></svg>
+          <svg viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#ED2939"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#00A1DE"/></svg>
+        </span>
+        <span class="ec-text"><b>Benelux</b><small>Scancoming Benelux · Brussels</small></span>
+        <span class="arr">→</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark">
+            <svg viewBox="0 0 100 160" aria-hidden="true"><use href="#fig-gent"/></svg>
+            <svg viewBox="0 0 100 160" aria-hidden="true"><use href="#fig-violin"/></svg>
+            <svg viewBox="0 0 100 160" aria-hidden="true"><use href="#fig-ben"/></svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">SCANCOMING</span>
+            <span class="brand-sub">Destination Management · est. 1977</span>
+          </span>
+        </a>
+        <p class="footer-blurb">A leading destination management company and your locally-based travel partner across the UK, Ireland and Benelux.</p>
+        <div class="footer-members">
+          <span class="member-chip">UK · London</span>
+          <span class="member-chip">Ireland · Dublin</span>
+          <span class="member-chip">Benelux · Brussels</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Destinations</h5>
+        <ul>
+          <li><a href="destinations/netherlands/">Netherlands</a></li>
+          <li><a href="destinations/belgium/">Belgium</a></li>
+          <li><a href="destinations/luxembourg/">Luxembourg</a></li>
+          <li><a href="destinations/united-kingdom/">United Kingdom</a></li>
+          <li><a href="destinations/ireland/">Ireland</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services/meetings-incentives/">Meetings &amp; Incentives</a></li>
+          <li><a href="services/tours-city-breaks/">Tours &amp; City Breaks</a></li>
+          <li><a href="services/tickets-events/">Tickets &amp; Events</a></li>
+          <li><a href="#offices">Contact an office</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="faq/">FAQ</a></li>
+          <li><a href="guides/what-is-a-dmc/">What is a DMC?</a></li>
+          <li><a href="guides/how-to-choose-a-dmc/">How to choose a DMC</a></li>
+          <li><a href="mailto:hello@scancoming.com">hello@scancoming.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scancoming. All rights reserved. · Privacy Policy</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3c-2 0-3.5 1.6-3.5 3.6V11H8v3.5h2.5V22H14v-7.5h2.6l.4-3.5H14V9.4c0-.3.2-.4.5-.4Z"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.5 21h-5.4l-4.2-5.5L7 21H4l7-8L3.5 3H9l3.8 5L17.5 3Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- sticky header ---------- */
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ---------- scroll reveal ---------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* hero content is in view on load — reveal it immediately (staggered) so it never sticks hidden */
+requestAnimationFrame(()=>{
+  document.querySelectorAll('.hero .reveal').forEach(el=>{ io.unobserve(el); el.classList.add('in'); });
+});
+
+/* failsafe: ensure nothing ever stays hidden */
+window.addEventListener('load', ()=>{ setTimeout(()=>{
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+    const r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight) el.classList.add('in');
+  });
+}, 1500); });
+
+/* ---------- hero parallax ---------- */
+const heroPhoto = document.getElementById('heroPhoto');
+let ticking=false;
+window.addEventListener('scroll', ()=>{
+  if(ticking) return;
+  ticking=true;
+  requestAnimationFrame(()=>{
+    const y = window.scrollY;
+    if(y < window.innerHeight){ heroPhoto.style.transform = `translateY(${y*0.18}px) scale(1.06)`; }
+    ticking=false;
+  });
+}, {passive:true});
+
+/* ---------- credibility marquee ---------- */
+const items = [
+  ['Est.','1977'],['Local offices in','London · Dublin · Brussels'],
+  ['Meetings','&amp; Incentives'],['Tours','&amp; City Breaks'],['Tickets','&amp; Events'],
+  ['One brief,','one regional contact'],['Research → planning →','booking'],['Emergency lines','in every region']
+];
+const make = () => items.map(([a,b])=>`<div class="strip-item"><span class="dot"></span><span><b>${a}</b> ${b}</span></div>`).join('');
+document.getElementById('stripTrack').innerHTML = make()+make();
+
+/* ---------- focus trap (mobile menu + modal) ---------- */
+function trapFocus(container, e){
+  if(e.key !== 'Tab') return;
+  const focusables = container.querySelectorAll('a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  if(!focusables.length) return;
+  const first = focusables[0], last = focusables[focusables.length-1];
+  if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+}
+
+/* ---------- mobile menu drawer ---------- */
+(function(){
+  const btn = document.querySelector('.menu-btn');
+  const menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+  function open(){ menu.classList.add('open'); menu.setAttribute('aria-hidden','false');
+    btn.setAttribute('aria-expanded','true'); document.body.classList.add('menu-open');
+    document.addEventListener('keydown', onKey);
+    const closeBtn = menu.querySelector('.mm-close'); if(closeBtn) closeBtn.focus(); }
+  function close(){ menu.classList.remove('open'); menu.setAttribute('aria-hidden','true');
+    btn.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open');
+    document.removeEventListener('keydown', onKey); btn.focus(); }
+  function onKey(e){ if(e.key === 'Escape') close(); trapFocus(menu, e); }
+  btn.addEventListener('click', open);
+  menu.querySelectorAll('[data-mm-close]').forEach(el=> el.addEventListener('click', close));
+})();
+
+/* ---------- enquiry office picker (ask after Send) ---------- */
+(function(){
+  const btn = document.getElementById('enquiryBtn');
+  const modal = document.getElementById('enquiryModal');
+  if(!btn || !modal) return;
+  const choices = modal.querySelectorAll('.enquiry-choice');
+
+  function buildMailto(office, region){
+    const subject = encodeURIComponent('Enquiry — ' + region);
+    const body = encodeURIComponent(
+      'Hi Scancoming team,\r\n\r\n' +
+      'Destination: ' + region + '\r\n\r\n' +
+      'Goal/brief: \r\nGroup size: \r\nDates: \r\nBudget: \r\n\r\nThanks,'
+    );
+    return 'mailto:' + office + '?subject=' + subject + '&body=' + body;
+  }
+  function open(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.addEventListener('keydown', onKey);
+    if(choices.length) choices[0].focus(); }
+  function close(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.removeEventListener('keydown', onKey); btn.focus(); }
+  function onKey(e){ if(e.key === 'Escape') close(); trapFocus(modal, e); }
+
+  btn.addEventListener('click', open);
+  modal.querySelectorAll('[data-close]').forEach(el=> el.addEventListener('click', close));
+  choices.forEach(c=>{
+    c.addEventListener('click', ()=>{
+      window.location.href = buildMailto(c.dataset.office, c.dataset.region);
+      close();
+    });
+  });
+})();
+</script>
+
+<script>
+/* ---------- hero animations (approved set) ---------- */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* headline word cascade — preserves styled spans */
+  const h1=document.querySelector('.hero h1');
+  if(h1){h1.classList.remove('reveal');h1.classList.add('in');
+    let i=0, out='';
+    h1.childNodes.forEach(n=>{
+      const cls=n.nodeType===1?n.className:'';
+      n.textContent.split(/\s+/).filter(Boolean).forEach(w=>{
+        out+='<span class="w"><span'+(cls?' class="'+cls+'"':'')+' style="--wd:'+(0.25+i*0.055).toFixed(3)+'s">'+w+'</span></span> ';
+        i++;});
+    });
+    h1.innerHTML=out.trim();}
+
+  /* count-up numbers in hero meta */
+  document.querySelectorAll('.hero-meta .hm b').forEach(el=>{
+    const m=el.textContent.match(/\d+/); if(!m) return;
+    const target=+m[0], tpl=el.textContent, start=target>100?target-77:0, dur=1800, t0=performance.now();
+    const tick=t=>{const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+      el.textContent=tpl.replace(m[0], String(Math.round(start+(target-start)*e)));
+      if(p<1) requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);
+  });
+
+  if(!matchMedia('(hover: hover)').matches) return;
+
+  /* magnetic buttons */
+  document.querySelectorAll('.btn').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      b.style.transform='translate('+(x*14).toFixed(1)+'px,'+(y*10).toFixed(1)+'px)';});
+    b.addEventListener('mouseleave',()=>{b.style.transform='';});
+  });
+
+  /* 3D tilt on cards */
+  document.querySelectorAll('.region-card,.service-card,.office').forEach(c=>{
+    c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c.style.transition='transform .08s linear';
+      c.style.transform='perspective(900px) rotateX('+(-y*6).toFixed(2)+'deg) rotateY('+(x*8).toFixed(2)+'deg) translateY(-6px)';});
+    c.addEventListener('mouseleave',()=>{c.style.transition='transform .6s var(--ease)';c.style.transform='';});
+  });
+})();
+</script>
+</body>
+</html>
