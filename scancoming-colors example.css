@@ -1,0 +1,38 @@
+/* Scancoming DMC — "Ivory & Ink" website palette
+   Light, premium, editorial. Red is the BRAND colour (logo only).
+   Buttons and links use the ink "action" colour, never red. */
+
+:root {
+  /* Surfaces */
+  --color-bg:          #FAF8F4;  /* page background (warm off-white) */
+  --color-surface:     #FFFFFF;  /* cards, panels */
+  --color-faint:       #F1ECE2;  /* subtle tint bands / tickers */
+
+  /* Text */
+  --color-ink:         #1E2430;  /* headings and body text */
+  --color-muted:       #6B6F78;  /* secondary text, captions */
+
+  /* Lines */
+  --color-line:        #E7E1D6;  /* hairlines, borders, dividers */
+
+  /* Brand + actions */
+  --color-brand-red:   #C8202A;  /* LOGO ONLY (and genuine errors/alerts) */
+  --color-action:      #1E2430;  /* primary buttons + links (ink, not red) */
+  --color-action-hover:#2B3340;  /* button/link hover */
+  --color-action-text: #FBF9F5;  /* text on the action colour */
+  --color-gold:        #9C7C46;  /* optional premium accent (fine rules, hover) */
+
+  /* Type */
+  --font-display: "Cinzel", Georgia, serif;             /* SCANCOMING / headings */
+  --font-serif:   "Cormorant Garamond", Georgia, serif;/* italic accents */
+  --font-body:    "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Usage guide
+   body        background: var(--color-bg);   color: var(--color-ink);
+   card        background: var(--color-surface); border: 1px solid var(--color-line);
+   a           color: var(--color-action);     (hover: var(--color-gold) or underline)
+   .btn        background: var(--color-action); color: var(--color-action-text);
+   .btn:hover  background: var(--color-action-hover);
+   muted text  color: var(--color-muted);
+   Keep red for the logo and real error states only — not for buttons. */

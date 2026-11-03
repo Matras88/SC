@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scancoming — Destination Management since 1977</title>
+<meta name="description" content="Scancoming is a locally-based destination management company arranging corporate meetings, incentives and tailor-made tours across the UK, Ireland and Benelux since 1977." />
+<link rel="canonical" href="https://www.scancoming.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Scancoming" />
+<meta property="og:title" content="Scancoming — Destination Management since 1977" />
+<meta property="og:description" content="Your locally-based DMC for meetings, incentives and tours across the UK, Ireland and Benelux. One brief, one regional contact." />
+<meta property="og:url" content="https://www.scancoming.com/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:image" content="https://www.scancoming.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Scancoming — destination management since 1977 across the UK, Ireland and Benelux" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Scancoming — Destination Management since 1977" />
+<meta name="twitter:description" content="Your locally-based DMC for meetings, incentives and tours across the UK, Ireland and Benelux." />
+<meta name="twitter:image" content="https://www.scancoming.com/assets/og-image.png" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#FAF8F4" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FAF8F4'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='40' font-weight='bold' fill='%231E2430'%3ES%3C/text%3E%3Crect x='14' y='50' width='36' height='4' rx='2' fill='%23C8202A'/%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Scancoming",
+  "url": "https://www.scancoming.com/",
+  "description": "Destination management company for the UK, Ireland and Benelux, established 1977. Corporate meetings, incentives, tailor-made tours and city breaks.",
+  "foundingDate": "1977",
+  "logo": "https://www.scancoming.com/assets/apple-touch-icon.png",
+  "image": "https://www.scancoming.com/assets/og-image.png",
+  "areaServed": ["GB", "IE", "BE", "NL", "LU"],
+  "knowsAbout": ["Destination management", "Corporate meetings", "Incentive travel", "City breaks", "Group tours"],
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "Reservations — United Kingdom", "telephone": "+44-20-7935-0101", "email": "reservations@scancoming.co.uk", "areaServed": "GB" },
+    { "@type": "ContactPoint", "contactType": "Reservations — Ireland", "telephone": "+353-1-871-9404", "email": "reservations@scancoming.ie", "areaServed": "IE" },
+    { "@type": "ContactPoint", "contactType": "Reservations — Belgium, Netherlands, Luxembourg", "telephone": "+32-470-29-74-98", "email": "reservations@scancoming.be", "areaServed": ["BE","NL","LU"] }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   SCANCOMING — design tokens
+   ============================================================ */
+:root{
+  /* ---- Ivory & Ink palette ---- */
+  /* text */
+  --ink:        #1E2430;   /* headings + body */
+  --ink-2:      #2B3340;   /* strong secondary / action hover */
+  --ink-soft:   #6B6F78;   /* muted, captions */
+
+  /* brand + accents */
+  --red:        #C8202A;   /* LOGO + genuine alerts only */
+  --gold:       #9C7C46;   /* premium accent (eyebrows, rules, CTA) */
+  --gold-deep:  #846734;   /* accent hover */
+  --gold-soft:  #EFE7D6;   /* faint gold tint (icon beds) */
+  --cream:      #E9D9B8;   /* accent on dark bands */
+
+  /* surfaces */
+  --paper:      #FAF8F4;   /* page background (warm off-white) */
+  --paper-2:    #F1ECE2;   /* faint tint chips */
+  --white:      #ffffff;   /* cards, panels */
+  --line:       #E7E1D6;
+  --line-soft:  #F1ECE2;
+
+  /* legacy aliases → remapped so existing rules adopt the palette */
+  --blue:       #9C7C46;   /* was accent blue → now gold */
+  --blue-bright:#B89A63;
+  --blue-deep:  #2B3340;
+  --blue-night: #171C25;   /* deep ink for dark bands */
+  --sky:        #E9D9B8;   /* accent on dark → cream/gold */
+  --sky-soft:   #EFE7D6;
+  --amber:      #9C7C46;   /* CTA → gold */
+  --amber-deep: #846734;
+
+  --maxw: 1240px;
+  --pad: clamp(20px, 5vw, 64px);
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 9px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --shadow-sm: 0 1px 2px oklch(0.35 0.02 70 / .07), 0 2px 8px oklch(0.35 0.02 70 / .06);
+  --shadow-md: 0 8px 24px oklch(0.3 0.02 70 / .12), 0 2px 6px oklch(0.3 0.02 70 / .07);
+  --shadow-lg: 0 24px 60px oklch(0.25 0.02 60 / .24);
+
+  --f-display:"Cinzel", Georgia, serif;                 /* reserved for display flourishes */
+  --f-head:"Cormorant Garamond", Georgia, serif;        /* section + hero headings */
+  --f-serif:"Cormorant Garamond", Georgia, serif;       /* italic accents */
+  --f-body:"Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"Outfit", system-ui, sans-serif;             /* eyebrows / labels (uppercase, tracked) */
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:var(--f-body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  letter-spacing:-0.005em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--ink);color:#fff;}
+
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);}
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:12px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--red);
+  display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--red);}
+.eyebrow.center::before{display:none;}
+
+h1,h2,h3{font-family:var(--f-head);line-height:1.08;letter-spacing:-0.005em;font-weight:600;}
+.serif-accent{font-family:var(--f-serif);font-style:italic;font-weight:500;letter-spacing:0;color:var(--red);}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:600;font-size:15px;letter-spacing:-0.01em;
+  padding:14px 24px;border-radius:100px;
+  transition:transform .35s var(--ease), background .25s var(--ease), box-shadow .35s var(--ease), color .25s var(--ease);
+  cursor:pointer;border:1px solid transparent;white-space:nowrap;
+}
+.btn .arr{transition:transform .35s var(--ease);display:inline-block;}
+.btn:hover .arr{transform:translateX(4px);}
+.btn-primary{background:var(--ink);color:var(--white);box-shadow:var(--shadow-sm);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);background:var(--blue-night);}
+.btn-amber{background:var(--red);color:#fff;font-weight:600;box-shadow:0 4px 14px rgba(200,32,42,.26);}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(200,32,42,.34);background:#A81A23;color:#fff;}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);}
+.btn-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.28);backdrop-filter:blur(6px);}
+.btn-light:hover{background:#fff;color:var(--ink);transform:translateY(-2px);}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:oklch(0.98 0.006 75 / .84);
+  backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid var(--line-soft);
+  box-shadow:0 1px 0 oklch(1 0 0 / .5);
+  transition:box-shadow .4s var(--ease);
+}
+.header.scrolled{
+  box-shadow:0 6px 24px oklch(0.35 0.06 256 / .08), 0 1px 0 oklch(1 0 0 / .5);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:78px;}
+.brand{display:flex;align-items:center;gap:13px;}
+.brand-logo{height:46px;width:auto;display:block;transition:opacity .4s var(--ease), transform .4s var(--ease);}
+.header:not(.scrolled) .brand-logo{opacity:0;transform:translateY(-6px);}
+.brand-mark{
+  flex:none;display:flex;align-items:flex-end;gap:2px;
+  background:transparent;padding:0;
+}
+.brand-mark svg{height:40px;width:auto;display:block;}
+.brand-figs{display:flex;align-items:flex-end;gap:2px;}
+.brand-text{display:flex;flex-direction:column;line-height:1;}
+.brand-name{font-weight:800;font-size:20px;letter-spacing:0.01em;color:var(--ink);transition:color .4s var(--ease);}
+.brand-sub{font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px;transition:color .4s var(--ease);}
+
+.nav{display:flex;align-items:center;gap:6px;}
+.nav a.navlink{
+  padding:9px 14px;border-radius:9px;font-weight:500;font-size:14.5px;white-space:nowrap;
+  color:var(--ink-2);transition:color .25s, background .25s;position:relative;
+}
+.header:not(.scrolled) .nav a.navlink{color:var(--ink-2);}
+.nav a.navlink:hover{background:oklch(0.6 0.06 72 / .12);color:var(--gold-deep);}
+.nav-cta{margin-left:10px;}
+.menu-btn{display:none;}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  color:var(--ink);overflow:hidden;background:var(--paper);
+  padding-bottom:clamp(64px,10vh,110px);padding-top:150px;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);
+}
+/* warm ivory wash with a faint red + gold bloom */
+.hero-photo{
+  position:absolute;inset:-8% -2% -2% -2%;
+  background:
+    radial-gradient(60% 70% at 82% 30%, rgba(200,32,42,0.07), transparent 60%),
+    radial-gradient(70% 80% at 70% 80%, rgba(156,124,70,0.10), transparent 60%),
+    linear-gradient(180deg, #FBFAF6 0%, #FAF8F4 60%, #F4EFE6 100%);
+  will-change:transform;
+}
+.hero-photo .skyline{position:absolute;left:0;right:0;bottom:0;height:42%;opacity:.5;mix-blend-mode:soft-light;}
+.hero-grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");}
+.hero-photo-tag{
+  position:absolute;top:118px;right:var(--pad);z-index:3;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+  color:oklch(0.92 0.03 236 / .8);border:1px solid rgba(255,255,255,.22);
+  padding:7px 12px;border-radius:100px;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);
+  display:flex;align-items:center;gap:8px;
+}
+.hero-photo-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber);}
+
+.hero-inner{position:relative;z-index:2;width:100%;}
+.hero-inner .wrap{display:flex;flex-direction:column;}
+.hero-logo{width:min(440px,78vw);height:auto;display:block;margin-bottom:34px;
+  margin-left:calc(min(440px,78vw) * -0.085);} /* offset the SVG's built-in left padding */
+.hero-eyebrow{color:var(--red);}
+.hero-eyebrow::before{background:var(--red);}
+.hero h1{
+  font-size:clamp(38px,5.8vw,78px);font-weight:600;letter-spacing:-0.015em;line-height:1.06;
+  max-width:16ch;margin-top:22px;text-wrap:balance;color:var(--ink);
+}
+.hero h1 .serif-accent{color:var(--red);}
+/* red swoosh echoing the logo underline */
+.swoosh{display:block;width:min(340px,60vw);height:12px;margin-top:22px;color:var(--red);}
+.hero-sub{
+  font-size:clamp(16px,1.6vw,20px);font-weight:400;color:var(--ink-soft);
+  max-width:46ch;margin-top:24px;line-height:1.6;letter-spacing:-0.005em;
+}
+.hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+.hero-meta{
+  display:flex;gap:34px;flex-wrap:wrap;margin-top:54px;
+  padding-top:30px;border-top:1px solid var(--line);
+}
+.hero-meta .hm{display:flex;flex-direction:column;gap:4px;}
+.hero-meta .hm b{font-family:var(--f-head);font-size:30px;font-weight:600;letter-spacing:-0.01em;color:var(--ink);}
+.hero-meta .hm span{font-family:var(--f-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);}
+
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  font-family:var(--f-mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-soft);
+  display:flex;flex-direction:column;align-items:center;gap:9px;}
+.scroll-hint .line{width:1px;height:30px;background:linear-gradient(var(--red),transparent);animation:drop 2s var(--ease) infinite;transform-origin:top;}
+@keyframes drop{0%{transform:scaleY(0);opacity:0;}40%{transform:scaleY(1);opacity:1;}100%{transform:scaleY(1) translateY(8px);opacity:0;}}
+
+/* ============================================================
+   CREDIBILITY STRIP (marquee)
+   ============================================================ */
+.strip{background:var(--paper-2);color:var(--ink);overflow:hidden;border-block:1px solid var(--line);}
+.strip-track{display:flex;gap:0;width:max-content;animation:marquee 38s linear infinite;}
+.strip:hover .strip-track{animation-play-state:paused;}
+.strip-item{display:flex;align-items:center;gap:16px;padding:20px 34px;white-space:nowrap;}
+.strip-item span{font-size:16px;font-weight:400;color:var(--ink-soft);}
+.strip-item b{font-weight:600;color:var(--ink);}
+.strip-item .dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex:none;}
+@keyframes marquee{to{transform:translateX(-50%);}}
+
+/* ============================================================
+   SECTION shell
+   ============================================================ */
+.section{padding-block:clamp(72px,11vh,140px);position:relative;}
+.section-head{max-width:760px;margin-bottom:clamp(40px,6vh,68px);}
+.section-head.center{margin-inline:auto;text-align:center;}
+.section-head h2{font-size:clamp(32px,4.6vw,56px);margin-top:18px;letter-spacing:-0.035em;line-height:1.07;text-wrap:balance;}
+.section-head p{font-size:clamp(17px,1.8vw,19px);color:var(--ink-soft);margin-top:20px;line-height:1.6;max-width:60ch;}
+.section-head.center p{margin-inline:auto;}
+
+/* ============================================================
+   VALUE / FULL-SERVICE
+   ============================================================ */
+.value{background:var(--white);}
+.value-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(36px,5vw,80px);align-items:center;}
+.value-lead{font-size:clamp(24px,3vw,36px);font-weight:600;letter-spacing:-0.03em;line-height:1.22;text-wrap:balance;}
+.value-lead .serif-accent{display:inline;}
+.value-body{font-size:18px;color:var(--ink-soft);margin-top:26px;line-height:1.65;max-width:46ch;}
+.value-steps{display:flex;flex-direction:column;gap:14px;margin-top:6px;}
+.vstep{
+  display:flex;gap:20px;padding:22px;border-radius:var(--r-md);background:var(--paper);
+  border:1px solid var(--line-soft);transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+}
+.vstep:hover{transform:translateX(6px);box-shadow:var(--shadow-md);border-color:rgba(200,32,42,.35);}
+.vstep-num{font-family:var(--f-mono);font-size:13px;font-weight:700;color:var(--red);flex:none;padding-top:3px;}
+.vstep h3{font-size:18px;font-weight:700;letter-spacing:-0.02em;}
+.vstep p{font-size:15px;color:var(--ink-soft);margin-top:6px;line-height:1.55;}
+
+/* ============================================================
+   REGIONS
+   ============================================================ */
+.regions{background:var(--paper);}
+.region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.region-card{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--ink);
+  min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;
+  color:#fff;cursor:pointer;isolation:isolate;
+  box-shadow:var(--shadow-sm);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.region-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg);}
+.region-photo{position:absolute;inset:0;z-index:-2;transition:transform .9s var(--ease);}
+.region-img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;}
+.region-card:hover .region-photo{transform:scale(1.06);}
+.region-card::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg, rgba(32,40,52,.52) 0%, rgba(32,40,52,0) 24%, rgba(32,40,52,0) 50%, rgba(25,32,42,.58) 73%, rgba(20,26,34,.94) 100%);}
+.region-tag{position:absolute;top:18px;left:18px;z-index:2;font-family:var(--f-mono);font-size:10px;letter-spacing:0.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(255,255,255,.12);backdrop-filter:blur(6px);
+  padding:6px 11px;border-radius:100px;border:1px solid rgba(255,255,255,.2);}
+.region-body{position:relative;z-index:2;padding:28px;}
+.region-body h3{font-size:30px;font-weight:800;letter-spacing:-0.03em;}
+.region-cities{font-family:var(--f-mono);font-size:11.5px;letter-spacing:0.06em;color:var(--sky);margin-top:10px;text-transform:uppercase;}
+.region-body p{font-size:14.5px;color:oklch(0.9 0.015 236);margin-top:14px;line-height:1.55;max-width:34ch;
+  max-height:0;opacity:0;overflow:hidden;transition:max-height .55s var(--ease), opacity .45s var(--ease), margin .45s var(--ease);}
+.region-card:hover .region-body p,.region-card:focus-visible .region-body p{max-height:120px;opacity:1;}
+.region-card:focus-visible{outline:3px solid var(--amber);outline-offset:3px;transform:translateY(-7px);box-shadow:var(--shadow-lg);}
+.region-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;font-size:14px;color:#fff;}
+.region-link .arr{transition:transform .35s var(--ease);}
+.region-card:hover .region-link .arr{transform:translateX(5px);}
+
+/* eight-country layout: two rows of four */
+.dest-grid{grid-template-columns:repeat(4,1fr);gap:18px;}
+.dest-grid .region-card{min-height:380px;}
+.dest-grid .region-body{padding:24px;}
+.dest-grid .region-body h3{font-size:26px;}
+
+/* photo placeholder fills (duotone, no detailed art) */
+.ph{position:absolute;inset:0;}
+.ph-london{background:linear-gradient(165deg, #3b4454, #1E2430);}
+.ph-ireland{background:linear-gradient(165deg, #b89a63, #2B3340);}
+.ph-benelux{background:linear-gradient(165deg, #2B3340, #171C25);}
+.ph-tex{position:absolute;inset:0;opacity:.4;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.ph-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,.42);
+  border:1px dashed rgba(255,255,255,.28);padding:6px 12px;border-radius:6px;white-space:nowrap;}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services{background:var(--white);}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.service-card{
+  background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-lg);
+  padding:30px;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s, background .45s;
+  position:relative;overflow:hidden;
+}
+.service-card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--red);transition:width .5s var(--ease);}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--line);background:var(--white);}
+.service-card:hover::before{width:100%;}
+.service-icon{width:54px;height:54px;border-radius:15px;background:rgba(200,32,42,.07);color:var(--red);
+  display:grid;place-items:center;margin-bottom:24px;transition:background .45s var(--ease), color .45s, transform .45s var(--ease);}
+.service-card:hover .service-icon{background:var(--red);color:#fff;transform:rotate(-6deg) scale(1.06);}
+.service-icon svg{width:26px;height:26px;}
+.service-card h3{font-size:23px;font-weight:800;letter-spacing:-0.025em;}
+.service-card p{font-size:15px;color:var(--ink-soft);margin-top:13px;line-height:1.6;flex:1;}
+.service-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.service-tags span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);padding:5px 10px;border-radius:100px;}
+
+/* ============================================================
+   WHY  (dark band)
+   ============================================================ */
+.why{background:var(--paper-2);color:var(--ink);position:relative;overflow:hidden;}
+.why::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:130%;z-index:0;
+  background:radial-gradient(circle at center, rgba(200,32,42,.06), transparent 65%);}
+.why .wrap{position:relative;z-index:1;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;}
+.why-cell{background:var(--white);padding:34px 28px;transition:background .45s var(--ease);position:relative;}
+.why-cell::before{content:"";position:absolute;left:28px;top:0;width:28px;height:3px;background:var(--red);border-radius:0 0 3px 3px;}
+.why-cell:hover{background:var(--paper);}
+.why-cell .num{font-family:var(--f-mono);font-size:12px;font-weight:700;color:var(--red);letter-spacing:0.1em;}
+.why-cell h3{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin-top:18px;}
+.why-cell p{font-size:14.5px;color:var(--ink-soft);margin-top:11px;line-height:1.6;}
+
+/* ============================================================
+   CONTACT / OFFICES
+   ============================================================ */
+.contact{background:var(--paper);}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px;}
+.office{
+  background:var(--white);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:30px;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s;
+}
+.office:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--sky);}
+.office-flag{width:44px;height:30px;border-radius:6px;overflow:hidden;box-shadow:var(--shadow-sm);margin-bottom:20px;}
+.office-flags{display:flex;gap:7px;margin-bottom:20px;}
+.office-flags .office-flag{margin-bottom:0;transition:none;transform:none;}
+.office h3{font-size:26px;font-weight:600;letter-spacing:-0.01em;}
+.office .role{font-family:var(--f-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-top:6px;}
+.office-countries{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+.office-countries li{font-size:12.5px;font-weight:500;color:var(--ink-2);background:var(--paper);
+  border:1px solid var(--line);border-radius:100px;padding:5px 12px;display:inline-flex;align-items:center;gap:7px;}
+.office-countries li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);}
+.office-rows{margin-top:22px;display:flex;flex-direction:column;gap:2px;}
+.orow{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--line-soft);align-items:flex-start;}
+.orow:first-child{border-top:none;}
+.orow .ic{width:18px;color:var(--red);flex:none;margin-top:2px;}
+.orow .ic svg{width:16px;height:16px;}
+.orow a,.orow span{font-size:14.5px;color:var(--ink-2);transition:color .2s;line-height:1.45;}
+.orow a:hover{color:var(--red);}
+.orow .em{font-family:var(--f-mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;}
+.office-emergency{margin-top:18px;padding:13px 15px;background:rgba(200,32,42,.07);border:1px solid rgba(200,32,42,.26);
+  border-radius:10px;font-size:12.5px;color:#a81a23;display:flex;align-items:center;gap:9px;}
+.office-emergency b{font-weight:700;}
+
+/* contact by country — no office addresses on this page */
+.country-contacts{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);}
+.cc-row{display:grid;grid-template-columns:44px 1.1fr 1fr 1.4fr;align-items:center;gap:20px;padding:20px 28px;border-top:1px solid var(--line-soft);}
+.cc-row:first-child{border-top:none;}
+.cc-row .flag{width:40px;height:27px;border-radius:5px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;}
+.cc-row .flag svg{width:100%;height:100%;}
+.cc-country{font-family:var(--f-head);font-size:22px;font-weight:600;color:var(--ink);}
+.cc-row a{font-size:15px;color:var(--ink-2);transition:color .2s;overflow-wrap:anywhere;}
+.cc-row a:hover{color:var(--red);}
+.contact-cta{margin-top:46px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(34px,5vw,60px);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;color:var(--ink);position:relative;overflow:hidden;
+  box-shadow:var(--shadow-sm);}
+.contact-cta::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);}
+.contact-cta::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 140% at 95% 0%, rgba(200,32,42,.06), transparent 55%);}
+.contact-cta .cc-text{position:relative;z-index:1;}
+.contact-cta h3{font-size:clamp(28px,3.6vw,44px);letter-spacing:-0.01em;font-weight:600;line-height:1.08;}
+.contact-cta p{color:var(--ink-soft);margin-top:12px;font-size:17px;max-width:42ch;}
+.contact-cta .cc-actions{position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.dest-select{display:flex;flex-direction:column;gap:9px;}
+.dest-label{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);}
+.dest-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.dest-pill{font-family:var(--f-body);font-weight:600;font-size:14px;letter-spacing:-0.01em;color:#fff;cursor:pointer;white-space:nowrap;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);border-radius:100px;padding:9px 16px;
+  transition:background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);}
+.dest-pill:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.4);}
+.dest-pill.is-active{background:var(--white);color:var(--ink);border-color:var(--white);}
+.cc-hint{font-family:var(--f-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:oklch(0.82 0.03 236);display:flex;align-items:center;gap:8px;}
+.cc-hint::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sky);flex:none;}
+
+/* ---------- enquiry office picker (modal) ---------- */
+.enquiry-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;
+  opacity:0;visibility:hidden;transition:opacity .35s var(--ease), visibility .35s var(--ease);}
+.enquiry-modal.open{opacity:1;visibility:visible;}
+.enquiry-backdrop{position:absolute;inset:0;background:oklch(0.25 0.01 70 / .45);backdrop-filter:blur(5px);}
+.enquiry-dialog{position:relative;width:min(520px,100%);background:var(--white);border-radius:var(--r-lg);
+  padding:clamp(28px,4vw,40px);box-shadow:var(--shadow-lg);
+  transform:translateY(18px) scale(.97);transition:transform .4s var(--ease);}
+.enquiry-modal.open .enquiry-dialog{transform:none;}
+.enquiry-dialog h3{font-size:clamp(22px,2.6vw,28px);letter-spacing:-0.03em;margin-top:14px;}
+.enquiry-dialog>p{font-size:15.5px;color:var(--ink-soft);margin-top:12px;line-height:1.55;max-width:42ch;}
+.enquiry-close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink-soft);display:grid;place-items:center;cursor:pointer;font-size:20px;line-height:1;
+  transition:background .25s, color .25s, border-color .25s;}
+.enquiry-close:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.enquiry-choices{display:flex;flex-direction:column;gap:10px;margin-top:26px;}
+.enquiry-choice{display:flex;align-items:center;gap:16px;width:100%;text-align:left;cursor:pointer;
+  background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-md);padding:16px 18px;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s, background .35s;}
+.enquiry-choice:hover{transform:translateX(5px);box-shadow:var(--shadow-md);border-color:var(--sky);background:var(--white);}
+.enquiry-choice .flag{flex:none;width:40px;height:27px;border-radius:5px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;}
+.enquiry-choice .flag svg{width:100%;height:100%;}
+.enquiry-choice .flag.multi svg{width:33.34%;}
+.enquiry-choice .ec-text{flex:1;display:flex;flex-direction:column;gap:2px;}
+.enquiry-choice .ec-text b{font-size:17px;font-weight:700;letter-spacing:-0.02em;color:var(--ink);}
+.enquiry-choice .ec-text small{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);}
+.enquiry-choice .arr{color:var(--blue);font-size:18px;transition:transform .35s var(--ease);flex:none;}
+.enquiry-choice:hover .arr{transform:translateX(4px);}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:var(--paper-2);color:var(--ink-2);padding-top:72px;border-top:3px solid var(--red);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:54px;border-bottom:1px solid var(--line);}
+.footer .brand-logo{height:60px;}
+.footer-blurb{font-size:15px;color:var(--ink-soft);margin-top:22px;max-width:38ch;line-height:1.6;}
+.footer-members{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.member-chip{font-family:var(--f-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.82 0.02 236);
+  border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:9px 13px;transition:border-color .3s, color .3s;background:rgba(255,255,255,.03);}
+.member-chip:hover{border-color:var(--sky);color:#fff;}
+.footer-col h3{font-weight:700;font-family:var(--f-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);margin-bottom:20px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+.footer-col a{font-size:15px;color:var(--ink-2);transition:color .2s, padding .25s var(--ease);}
+.footer-col a:hover{color:var(--red);padding-left:5px;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:26px;flex-wrap:wrap;}
+.footer-bottom p{font-size:13px;color:var(--ink-soft);}
+.footer-social{display:flex;gap:10px;}
+.footer-social a{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;background:var(--white);
+  color:var(--ink-2);transition:background .3s, color .3s, transform .3s var(--ease), border-color .3s;}
+.footer-social a:hover{background:var(--red);color:#fff;transform:translateY(-3px);border-color:var(--red);}
+.footer-social svg{width:17px;height:17px;}
+
+/* ============================================================
+   reveal animation — transform-only (content always visible; never
+   depends on an opacity transition completing)
+   ============================================================ */
+.reveal{transform:translateY(30px);transition:transform .9s var(--ease);will-change:transform;}
+.reveal.in{transform:none;}
+.reveal[data-d="1"]{transition-delay:.09s;}
+.reveal[data-d="2"]{transition-delay:.18s;}
+.reveal[data-d="3"]{transition-delay:.27s;}
+@media (prefers-reduced-motion:reduce){
+  .reveal{transform:none;transition:none;}
+  .strip-track,.scroll-hint .line{animation:none;}
+  *{scroll-behavior:auto;}
+}
+
+/* ============================================================
+   MOBILE MENU DRAWER
+   ============================================================ */
+.mobile-menu{position:fixed;inset:0;z-index:130;visibility:hidden;}
+.mobile-menu .mm-backdrop{position:absolute;inset:0;background:oklch(0.2 0.05 260 / .5);
+  opacity:0;transition:opacity .35s var(--ease);backdrop-filter:blur(2px);}
+.mobile-menu .mm-panel{position:absolute;top:0;right:0;height:100%;width:min(360px,87vw);
+  background:var(--white);box-shadow:var(--shadow-lg);transform:translateX(100%);
+  transition:transform .42s var(--ease);display:flex;flex-direction:column;
+  padding:20px 22px calc(22px + env(safe-area-inset-bottom));overflow-y:auto;}
+.mobile-menu.open{visibility:visible;}
+.mobile-menu.open .mm-backdrop{opacity:1;}
+.mobile-menu.open .mm-panel{transform:none;}
+.mm-head{display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:18px;margin-bottom:10px;border-bottom:1px solid var(--line-soft);}
+.mm-head .brand-sub{font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ink-soft);}
+.mm-logo{height:36px;width:auto;display:block;}
+.mm-close{width:44px;height:44px;border-radius:11px;border:1px solid var(--line);background:var(--paper);
+  color:var(--ink);display:grid;place-items:center;cursor:pointer;font-size:24px;line-height:1;flex:none;
+  transition:background .25s, color .25s;}
+.mm-close:active{background:var(--ink);color:#fff;}
+.mm-links{display:flex;flex-direction:column;margin-top:6px;}
+.mm-links a{display:flex;align-items:center;justify-content:space-between;
+  padding:17px 6px;font-size:19px;font-weight:600;letter-spacing:-0.02em;color:var(--ink);
+  border-bottom:1px solid var(--line-soft);transition:padding .25s var(--ease), color .25s;}
+.mm-links a::after{content:"→";color:var(--blue);opacity:.5;font-size:16px;}
+.mm-links a:active{padding-left:14px;color:var(--blue);}
+.mm-cta{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:12px;}
+.mm-cta .btn{justify-content:center;width:100%;padding:16px 24px;font-size:16px;}
+.mm-contact{display:flex;flex-direction:column;gap:7px;padding-top:18px;margin-top:18px;border-top:1px solid var(--line-soft);}
+.mm-contact a{font-family:var(--f-mono);font-size:12.5px;letter-spacing:0.02em;color:var(--ink-soft);}
+.mm-contact a:active{color:var(--blue);}
+body.menu-open{overflow:hidden;}
+
+/* ============================================================
+   responsive
+   ============================================================ */
+@media (max-width:980px){
+  .value-grid{grid-template-columns:1fr;gap:44px;}
+  .region-grid,.service-grid,.contact-grid{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:980px){
+  .dest-grid{grid-template-columns:1fr 1fr;}
+  .dest-grid .region-card{min-height:360px;}
+  .cc-row{grid-template-columns:44px 1fr;row-gap:6px;}
+  .cc-row a{grid-column:2;}
+}
+@media (max-width:760px){
+  .dest-grid{grid-template-columns:1fr;}
+  .cc-row{padding:18px 20px;}
+  .nav{display:none;}
+  .menu-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:transparent;cursor:pointer;}
+  .menu-btn svg{width:22px;height:22px;color:var(--ink);}
+  .header-inner{height:64px;}
+  .hero{padding-top:112px;min-height:auto;padding-bottom:64px;}
+  .region-grid,.service-grid,.contact-grid,.why-grid,.footer-top{grid-template-columns:1fr;}
+  .region-card{min-height:360px;}
+  .region-body p{max-height:120px;opacity:1;}
+  .hero-meta{gap:22px 30px;margin-top:40px;padding-top:26px;}
+  .hero-photo-tag{display:none;}
+  .scroll-hint{display:none;}
+  .contact-cta{flex-direction:column;align-items:flex-start;}
+  .strip-item{padding:16px 24px;}
+  .strip-item span{font-size:14.5px;}
+  .why-cell{padding:28px 24px;}
+  .service-card,.office{padding:26px;}
+}
+@media (max-width:520px){
+  .header-inner{height:60px;}
+  .brand-sub{display:none;}
+  .brand-mark svg{height:34px;}
+  .brand-logo{height:34px;}
+  .hero{padding-top:100px;}
+  .hero h1{font-size:clamp(30px,8.5vw,40px);margin-top:18px;}
+  .hero-sub{margin-top:18px;}
+  .hero-actions{margin-top:28px;gap:11px;}
+  .hero-actions .btn{flex:1 1 auto;justify-content:center;}
+  .hero-meta{gap:18px 26px;margin-top:34px;}
+  .hero-meta .hm b{font-size:22px;}
+  .section{padding-block:clamp(56px,9vh,80px);}
+  .section-head{margin-bottom:34px;}
+  .value-body{margin-top:20px;}
+  .contact-cta{padding:28px 24px;}
+  .contact-cta .cc-actions{width:100%;}
+  .contact-cta .cc-actions .btn{width:100%;justify-content:center;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:18px;}
+  .enquiry-choice{padding:14px;gap:13px;}
+  .enquiry-choice .ec-text b{font-size:16px;}
+}
+/* ---- tweak-driven density ---- */
+body[data-density="compact"] .section{padding-block:clamp(46px,7vh,92px);}
+body[data-density="comfy"] .section{padding-block:clamp(96px,14vh,188px);}
+
+/* ============================================================
+   HERO ANIMATIONS (approved set)
+   ============================================================ */
+/* compact map, right-aligned to the content column and vertically centred */
+.route-svg{position:absolute;top:calc(50% + 30px);transform:translateY(-50%);
+  right:max(var(--pad), calc((100vw - var(--maxw)) / 2 + var(--pad)));
+  width:min(34vw,440px);height:auto;aspect-ratio:555 / 400;overflow:visible;
+  z-index:1;pointer-events:none;}
+.route-svg .path{fill:none;stroke:rgba(30,36,48,.32);stroke-width:1.7;
+  stroke-dasharray:2.5 6;stroke-linecap:round;}
+.route-svg .dot{fill:#C8202A;}
+.route-svg .ring{fill:none;stroke:rgba(200,32,42,.55);stroke-width:1.4;}
+.route-svg text{font-family:var(--f-mono);font-size:12.5px;font-weight:600;letter-spacing:.1em;
+  fill:rgba(30,36,48,.62);text-transform:uppercase;}
+.route-svg .pulse{fill:none;stroke:#C8202A;stroke-width:2.4;stroke-linecap:round;
+  stroke-dasharray:10 90;stroke-dashoffset:100;opacity:.75;
+  filter:drop-shadow(0 0 4px rgba(200,32,42,.35));}
+/* below 1180px the map no longer fits beside the headline, so drop it */
+@media (max-width:1179px){.route-svg{display:none;}}
+@media (max-width:760px){.aurora{display:none;}}
+
+@media (prefers-reduced-motion: no-preference){
+  .hero-eyebrow::before{animation:lineGrow 1s var(--ease) .15s backwards;}
+  @keyframes lineGrow{from{width:0;opacity:0;}}
+
+  .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em;}
+  .hero h1 .w>span{display:inline-block;transform:translateY(115%) rotate(3deg);
+    animation:wordUp .8s var(--ease) forwards;animation-delay:var(--wd,0s);}
+  @keyframes wordUp{to{transform:none;}}
+
+  .aurora{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;mix-blend-mode:screen;will-change:transform;}
+  .aurora{mix-blend-mode:multiply !important;opacity:.7 !important;}
+  .aurora.a1{width:46vw;height:46vw;top:-14%;right:-8%;
+    background:radial-gradient(circle,rgba(200,32,42,.10),transparent 65%);
+    animation:drift1 17s ease-in-out infinite alternate;}
+  .aurora.a2{width:36vw;height:36vw;bottom:-8%;left:-7%;
+    background:radial-gradient(circle,rgba(156,124,70,.14),transparent 60%);
+    animation:drift2 21s ease-in-out infinite alternate;}
+  @keyframes drift1{from{transform:translate(0,0) scale(1);}to{transform:translate(-6%,9%) scale(1.18);}}
+  @keyframes drift2{from{transform:translate(0,0) scale(1.05);}to{transform:translate(10%,-8%) scale(.95);}}
+
+  .route-svg .path{opacity:0;animation:fadeInAnim .9s var(--ease) forwards;}
+  .route-svg .p1{animation-delay:1.0s;}.route-svg .p2{animation-delay:1.25s;}
+  .route-svg .p3{animation-delay:1.1s;}.route-svg .p4{animation-delay:1.45s;}
+  .route-svg .p5{animation-delay:1.6s;}.route-svg .p6{animation-delay:1.85s;}
+  .route-svg .p7{animation-delay:2.1s;}.route-svg .p8{animation-delay:2.1s;}
+  .route-svg .city{opacity:0;animation:fadeInAnim .7s var(--ease) forwards;}
+  .route-svg .c1{animation-delay:.75s;}.route-svg .c2{animation-delay:1.0s;}
+  .route-svg .c3{animation-delay:1.25s;}.route-svg .c4{animation-delay:1.25s;}.route-svg .c5{animation-delay:1.5s;}
+  .route-svg .c6{animation-delay:1.75s;}.route-svg .c7{animation-delay:2.0s;}.route-svg .c8{animation-delay:2.0s;}
+  @keyframes fadeInAnim{to{opacity:1;}}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .route-svg .path,.route-svg .city{opacity:1;}
+  .route-svg .ring,.route-svg .pulse{display:none;}
+  .aurora{display:none;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== Scancoming wordmark (inlined from scancoming-logo1.svg) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sc-logo" viewBox="0 0 503 124"><path fill="#1E2430" d="M53.07 31.73L53.07 31.73Q53.98 31.73 55.23 31.82Q56.48 31.92 57.77 32.06L57.77 32.06Q58.2 32.16 58.64 32.21L58.64 32.21L61.47 32.21L61.42 33.22L61.37 33.22L61.04 38.88L60.56 38.88Q60.56 36.43 58.8 34.99Q57.05 33.55 54.27 33.55Q51.48 33.55 49.83 34.99Q48.17 36.43 48.12 38.5L48.12 38.5Q48.03 39.7 48.82 40.82Q49.61 41.95 50.96 42.91L50.96 42.91L60.22 49.78Q62.19 51.07 63.1 52.92Q64.01 54.77 63.92 57.07L63.92 57.07Q63.77 61.49 60.72 64.08Q57.68 66.67 52.44 66.67L52.44 66.67Q50.67 66.67 48.82 66.36Q46.97 66.05 45.44 65.4Q43.9 64.75 42.99 63.84L42.99 63.84Q42.7 62.88 42.75 61.51Q42.8 60.14 43.13 58.68Q43.47 57.22 43.95 56.21L43.95 56.21L44.38 56.21Q44.19 58.66 45.2 60.65Q46.2 62.64 48.15 63.77Q50.09 64.9 52.73 64.85L52.73 64.85Q55.71 64.75 57.51 63.17Q59.31 61.58 59.31 59.09L59.31 59.09Q59.31 57.65 58.54 56.47Q57.77 55.3 56.14 54.34L56.14 54.34L47.45 47.76Q45.24 46.32 44.31 44.28Q43.37 42.24 43.52 40.03L43.52 40.03Q43.66 37.73 44.81 35.83Q45.96 33.94 48.05 32.83Q50.14 31.73 53.07 31.73M108.08 51.98L108.46 51.98L108.56 60Q107.45 61.87 105.63 63.38Q103.8 64.9 101.19 65.78Q98.57 66.67 95.07 66.67L95.07 66.67Q89.5 66.62 85.28 64.51Q81.05 62.4 78.72 58.49Q76.4 54.58 76.4 49.15L76.4 49.15Q76.4 43.82 78.7 39.91Q81 36 85.23 33.86Q89.45 31.73 95.26 31.73L95.26 31.73Q99 31.73 101.98 32.57Q104.96 33.41 107.02 34.56L107.02 34.56L107.4 42.29L106.97 42.29Q105.77 37.73 102.72 35.64Q99.68 33.55 95.6 33.55L95.6 33.55Q91.66 33.55 88.8 35.45Q85.95 37.34 84.39 40.82Q82.83 44.3 82.83 49.06L82.83 49.06Q82.83 53.81 84.34 57.34Q85.85 60.86 88.61 62.81Q91.37 64.75 95.07 64.85L95.07 64.85Q98.67 64.85 101.33 63.62Q104 62.4 105.7 59.57Q107.4 56.74 108.08 51.98L108.08 51.98M135.44 31.54L135.87 31.54L149.74 62.74Q150.46 64.18 151.56 64.8L151.56 64.8Q152.72 65.52 153.82 65.52L153.82 65.52L154.2 65.52L154.2 66L140.43 66L140.43 65.52L140.86 65.52Q141.77 65.52 142.49 64.7L142.49 64.7Q143.16 63.98 142.73 62.64L142.73 62.64L140.09 55.82L128.24 55.82L125.55 62.5L125.55 62.5Q125.16 63.46 125.4 64.13Q125.64 64.8 126.22 65.16Q126.8 65.52 127.37 65.52L127.37 65.52L127.8 65.52L127.8 66L117.72 66L117.72 65.52L118.16 65.52Q119.26 65.52 120.46 64.8L120.46 64.8Q121.47 64.22 122.19 62.88L122.19 62.88L133.28 37.39Q133.37 37.2 133.68 36.46Q134 35.71 134.4 34.75Q134.81 33.79 135.1 32.9Q135.39 32.02 135.44 31.54L135.44 31.54M139.37 54L134.28 40.99L129 54L139.37 54M165.77 31.68L166.25 31.68L191.16 56.3L191.16 35.81Q191.12 34.56 190.28 33.72Q189.44 32.88 188.19 32.88L188.19 32.88L187.28 32.88L187.28 32.4L200.24 32.4L200.24 32.88L199.37 32.88Q198.17 32.88 197.31 33.72Q196.44 34.56 196.4 35.81L196.4 35.81L196.4 60.53Q196.4 62.26 196.54 63.65Q196.68 65.04 196.83 65.86L196.83 65.86L196.92 66.67L196.49 66.67L171.58 42.1L171.63 62.59L171.63 62.59Q171.63 63.79 172.49 64.66Q173.36 65.52 174.56 65.52L174.56 65.52L175.47 65.52L175.47 66L162.46 66L162.46 65.52L163.37 65.52Q164.57 65.52 165.44 64.66Q166.3 63.79 166.3 62.59L166.3 62.59L166.3 37.68Q166.3 35.09 166.06 33.36L166.06 33.36L165.77 31.68M243.68 51.98L244.06 51.98L244.16 60Q243.05 61.87 241.23 63.38Q239.4 64.9 236.79 65.78Q234.17 66.67 230.67 66.67L230.67 66.67Q225.1 66.62 220.88 64.51Q216.65 62.4 214.32 58.49Q212 54.58 212 49.15L212 49.15Q212 43.82 214.3 39.91Q216.6 36 220.83 33.86Q225.05 31.73 230.86 31.73L230.86 31.73Q234.6 31.73 237.58 32.57Q240.56 33.41 242.62 34.56L242.62 34.56L243 42.29L242.57 42.29Q241.37 37.73 238.32 35.64Q235.28 33.55 231.2 33.55L231.2 33.55Q227.26 33.55 224.4 35.45Q221.55 37.34 219.99 40.82Q218.43 44.3 218.43 49.06L218.43 49.06Q218.43 53.81 219.94 57.34Q221.45 60.86 224.21 62.81Q226.97 64.75 230.67 64.85L230.67 64.85Q234.27 64.85 236.93 63.62Q239.6 62.4 241.3 59.57Q243 56.74 243.68 51.98L243.68 51.98M275.4 31.73L275.4 31.73Q280.92 31.73 285.08 33.86Q289.23 36 291.48 39.94Q293.74 43.87 293.74 49.2L293.74 49.2Q293.74 54.53 291.48 58.46Q289.23 62.4 285.08 64.54Q280.92 66.67 275.4 66.67L275.4 66.67Q269.84 66.67 265.71 64.54Q261.58 62.4 259.32 58.46Q257.07 54.53 257.07 49.2L257.07 49.2Q257.07 43.87 259.32 39.94Q261.58 36 265.71 33.86Q269.84 31.73 275.4 31.73M275.4 64.85L275.4 64.85Q279 64.85 281.67 62.93Q284.33 61.01 285.8 57.5Q287.26 54 287.26 49.2L287.26 49.2Q287.26 44.4 285.8 40.9Q284.33 37.39 281.67 35.47Q279 33.55 275.4 33.55L275.4 33.55Q271.8 33.55 269.14 35.47Q266.48 37.39 265.01 40.9Q263.55 44.4 263.55 49.2L263.55 49.2Q263.55 54 265.01 57.5Q266.48 61.01 269.14 62.93Q271.8 64.85 275.4 64.85M326.48 57.55L340.4 31.73L340.83 31.73L344.81 62.5L344.81 62.5Q345.05 63.94 346.04 64.73Q347.02 65.52 348.32 65.52L348.32 65.52L349.08 65.52L349.08 66L335.98 66L335.98 65.57L336.7 65.57Q337.52 65.57 338.04 64.92Q338.57 64.27 338.57 63.5L338.57 63.5L338.57 63.26L338.57 63.26L336.6 44.11L327.24 61.68L326.81 62.5Q326.38 63.36 325.95 64.56Q325.52 65.76 325.47 66.86L325.47 66.86L324.99 66.86L312.7 44.26L310.73 63.26L310.73 63.26L310.73 63.5Q310.73 64.27 311.28 64.92Q311.84 65.57 312.6 65.57L312.6 65.57L313.32 65.57L313.32 66L303.53 66L303.53 65.52L304.3 65.52Q305.6 65.52 306.6 64.73Q307.61 63.94 307.8 62.5L307.8 62.5L307.8 62.5L311.64 31.73L312.12 31.73L326.48 57.55M362.67 62.5L362.67 62.5L362.67 35.9Q362.62 34.66 361.73 33.77Q360.84 32.88 359.6 32.88L359.6 32.88L358.97 32.88L358.97 32.4L372.22 32.4L372.22 32.88L371.6 32.88Q370.35 32.88 369.46 33.77Q368.57 34.66 368.52 35.9L368.52 35.9L368.52 62.5Q368.57 63.74 369.46 64.63Q370.35 65.52 371.6 65.52L371.6 65.52L372.22 65.52L372.22 66L358.97 66L358.97 65.52L359.6 65.52Q360.84 65.52 361.73 64.63Q362.62 63.74 362.67 62.5M387.1 31.68L387.58 31.68L412.49 56.3L412.49 35.81Q412.44 34.56 411.6 33.72Q410.76 32.88 409.52 32.88L409.52 32.88L408.6 32.88L408.6 32.4L421.56 32.4L421.56 32.88L420.7 32.88Q419.5 32.88 418.64 33.72Q417.77 34.56 417.72 35.81L417.72 35.81L417.72 60.53Q417.72 62.26 417.87 63.65Q418.01 65.04 418.16 65.86L418.16 65.86L418.25 66.67L417.82 66.67L392.91 42.1L392.96 62.59L392.96 62.59Q392.96 63.79 393.82 64.66Q394.68 65.52 395.88 65.52L395.88 65.52L396.8 65.52L396.8 66L383.79 66L383.79 65.52L384.7 65.52Q385.9 65.52 386.76 64.66Q387.63 63.79 387.63 62.59L387.63 62.59L387.63 37.68Q387.63 35.09 387.39 33.36L387.39 33.36L387.1 31.68M466.4 52.56L466.4 52.56L466.4 60.48Q465.29 61.92 463.16 63.36Q461.02 64.8 458 65.74Q454.97 66.67 451.13 66.67L451.13 66.67Q445.85 66.62 441.82 64.49Q437.79 62.35 435.56 58.44Q433.32 54.53 433.32 49.15L433.32 49.15Q433.32 43.87 435.53 39.94Q437.74 36 441.82 33.86Q445.9 31.73 451.32 31.73L451.32 31.73Q453.96 31.73 456.34 32.11Q458.72 32.5 460.71 33.14Q462.7 33.79 464.09 34.56L464.09 34.56L464.48 42.29L464.04 42.29Q463.18 39.17 461.48 37.27Q459.77 35.38 457.42 34.46Q455.07 33.55 452.33 33.55L452.33 33.55Q448.35 33.55 445.54 35.5Q442.73 37.44 441.24 40.97Q439.76 44.5 439.76 49.34L439.76 49.34Q439.76 54.05 441.17 57.53Q442.59 61.01 445.25 62.9Q447.92 64.8 451.56 64.85L451.56 64.85Q453.48 64.85 455.21 64.32Q456.94 63.79 458.36 62.76Q459.77 61.73 460.59 60.29L460.59 60.29L460.64 52.56Q460.64 50.4 458.19 50.4L458.19 50.4L457.42 50.4L457.42 49.92L469.52 49.92L469.52 50.4L468.8 50.4Q467.36 50.4 466.78 51.12L466.78 51.12Q466.35 51.65 466.4 52.56"/><path fill="#C8202A" d="M57.11 80 Q251.5 77 445.89 80 L440.89 87 Q251.5 84 62.11 87 Z"/><path fill="#6B6F78" d="M111.55 104L107.8 104L107.8 94.2L111.52 94.2Q112.58 94.2 113.49 94.57Q114.4 94.94 115.08 95.61Q115.76 96.27 116.14 97.16Q116.52 98.05 116.52 99.1L116.52 99.1Q116.52 100.14 116.14 101.03Q115.76 101.93 115.09 102.59Q114.42 103.26 113.51 103.63Q112.6 104 111.55 104L111.55 104M111.48 95.67L109.41 95.67L109.41 102.53L111.48 102.53Q112.49 102.53 113.25 102.1Q114.01 101.66 114.44 100.89Q114.87 100.11 114.87 99.09L114.87 99.09Q114.87 98.08 114.43 97.31Q114 96.54 113.24 96.1Q112.47 95.67 111.48 95.67L111.48 95.67M129.51 104L122.92 104L122.92 94.2L129.44 94.2L129.44 95.67L124.53 95.67L124.53 98.29L129.03 98.29L129.03 99.7L124.53 99.7L124.53 102.53L129.51 102.53L129.51 104M138.67 104.14L138.67 104.14Q137.51 104.14 136.69 103.72Q135.88 103.3 135.24 102.49L135.24 102.49L136.33 101.4Q136.73 101.98 137.29 102.31Q137.85 102.64 138.72 102.64L138.72 102.64Q139.54 102.64 140.02 102.31Q140.5 101.97 140.5 101.38L140.5 101.38Q140.5 100.89 140.25 100.58Q140 100.28 139.58 100.07Q139.17 99.87 138.67 99.71Q138.18 99.55 137.68 99.35Q137.18 99.14 136.77 98.83Q136.36 98.53 136.1 98.04Q135.85 97.55 135.85 96.79L135.85 96.79Q135.85 95.92 136.28 95.31Q136.71 94.7 137.44 94.38Q138.16 94.06 139.06 94.06L139.06 94.06Q140.02 94.06 140.79 94.44Q141.55 94.82 142.03 95.4L142.03 95.4L140.94 96.5Q140.51 96.02 140.06 95.79Q139.6 95.56 139.02 95.56L139.02 95.56Q138.29 95.56 137.88 95.85Q137.46 96.15 137.46 96.68L137.46 96.68Q137.46 97.13 137.72 97.4Q137.97 97.67 138.38 97.86Q138.79 98.05 139.29 98.22Q139.79 98.39 140.28 98.6Q140.78 98.81 141.19 99.14Q141.61 99.46 141.86 99.98Q142.11 100.5 142.11 101.28L142.11 101.28Q142.11 102.6 141.18 103.37Q140.25 104.14 138.67 104.14M152.56 104L150.95 104L150.95 95.67L147.75 95.67L147.75 94.2L155.75 94.2L155.75 95.67L152.56 95.67L152.56 104M163.52 104L161.91 104L161.91 94.2L163.52 94.2L163.52 104M172.02 104L170.41 104L170.41 94.2L171.53 94.2L176.71 100.96L176.71 94.2L178.32 94.2L178.32 104L177.2 104L172.02 97.24L172.02 104M186.18 104L184.48 104L188.51 94.2L189.63 94.2L193.63 104L191.9 104L191.15 102.11L186.94 102.11L186.18 104M187.5 100.71L190.59 100.71L189.05 96.8L187.5 100.71M203.87 104L202.26 104L202.26 95.67L199.06 95.67L199.06 94.2L207.06 94.2L207.06 95.67L203.87 95.67L203.87 104M214.83 104L213.22 104L213.22 94.2L214.83 94.2L214.83 104M226.22 104.14L226.22 104.14Q225.17 104.14 224.26 103.75Q223.35 103.36 222.67 102.66Q221.98 101.97 221.6 101.05Q221.21 100.14 221.21 99.09L221.21 99.09Q221.21 98.04 221.6 97.13Q221.98 96.22 222.66 95.52Q223.34 94.83 224.24 94.45Q225.15 94.06 226.2 94.06L226.2 94.06Q227.25 94.06 228.15 94.45Q229.05 94.83 229.74 95.52Q230.42 96.22 230.81 97.13Q231.19 98.05 231.19 99.1L231.19 99.1Q231.19 100.15 230.81 101.07Q230.42 101.98 229.74 102.67Q229.07 103.36 228.16 103.75Q227.26 104.14 226.22 104.14M226.2 102.6L226.2 102.6Q227.19 102.6 227.94 102.15Q228.69 101.7 229.11 100.91Q229.54 100.12 229.54 99.09L229.54 99.09Q229.54 98.32 229.3 97.68Q229.05 97.04 228.6 96.57Q228.16 96.1 227.55 95.85Q226.94 95.6 226.2 95.6L226.2 95.6Q225.22 95.6 224.47 96.04Q223.72 96.48 223.29 97.27Q222.86 98.05 222.86 99.09L222.86 99.09Q222.86 99.86 223.11 100.51Q223.35 101.16 223.79 101.62Q224.24 102.08 224.85 102.34Q225.47 102.6 226.2 102.6M239.2 104L237.59 104L237.59 94.2L238.71 94.2L243.89 100.96L243.89 94.2L245.5 94.2L245.5 104L244.38 104L239.2 97.24L239.2 104M261.56 104L259.95 104L259.95 94.2L261.07 94.2L264.78 100.3L268.49 94.2L269.61 94.2L269.61 104L268 104L268 97.73L265.34 102.1L264.22 102.1L261.56 97.73L261.56 104M277.48 104L275.77 104L279.8 94.2L280.92 94.2L284.93 104L283.19 104L282.45 102.11L278.23 102.11L277.48 104M278.79 100.71L281.89 100.71L280.35 96.8L278.79 100.71M292.7 104L291.09 104L291.09 94.2L292.21 94.2L297.39 100.96L297.39 94.2L299 94.2L299 104L297.88 104L292.7 97.24L292.7 104M306.86 104L305.16 104L309.19 94.2L310.31 94.2L314.31 104L312.58 104L311.83 102.11L307.62 102.11L306.86 104M308.18 100.71L311.27 100.71L309.73 96.8L308.18 100.71M324.9 104.14L324.9 104.14Q323.89 104.14 322.99 103.75Q322.1 103.36 321.42 102.66Q320.75 101.97 320.37 101.05Q319.98 100.14 319.98 99.09Q319.98 98.04 320.37 97.13Q320.75 96.22 321.43 95.52Q322.11 94.83 323.03 94.45Q323.94 94.06 325.01 94.06L325.01 94.06Q326.17 94.06 327.16 94.51Q328.16 94.96 328.83 95.78L328.83 95.78L327.74 96.87Q327.3 96.26 326.58 95.93Q325.85 95.6 325.01 95.6L325.01 95.6Q324 95.6 323.24 96.04Q322.47 96.48 322.05 97.27Q321.63 98.05 321.63 99.09Q321.63 100.12 322.06 100.91Q322.49 101.7 323.22 102.15Q323.94 102.6 324.87 102.6L324.87 102.6Q325.85 102.6 326.55 102.24Q327.26 101.89 327.64 101.17L327.64 101.17Q327.88 100.74 327.96 100.16L327.96 100.16L324.84 100.16L324.84 98.69L329.68 98.69L329.68 98.92Q329.68 100.67 329.06 101.83Q328.44 102.99 327.36 103.57Q326.28 104.14 324.9 104.14M342.63 104L336.04 104L336.04 94.2L342.56 94.2L342.56 95.67L337.65 95.67L337.65 98.29L342.16 98.29L342.16 99.7L337.65 99.7L337.65 102.53L342.63 102.53L342.63 104M350.67 104L349.06 104L349.06 94.2L350.18 94.2L353.89 100.3L357.6 94.2L358.72 94.2L358.72 104L357.11 104L357.11 97.73L354.45 102.1L353.33 102.1L350.67 97.73L350.67 104M372.2 104L365.61 104L365.61 94.2L372.13 94.2L372.13 95.67L367.22 95.67L367.22 98.29L371.73 98.29L371.73 99.7L367.22 99.7L367.22 102.53L372.2 102.53L372.2 104M380.24 104L378.63 104L378.63 94.2L379.75 94.2L384.93 100.96L384.93 94.2L386.54 94.2L386.54 104L385.42 104L380.24 97.24L380.24 104M397.5 104L395.89 104L395.89 95.67L392.7 95.67L392.7 94.2L400.69 94.2L400.69 95.67L397.5 95.67L397.5 104"/></symbol></svg>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Scancoming home">
+      <svg class="brand-logo" viewBox="0 0 503 124" role="img" aria-label="Scancoming — Destination Management"><use href="#sc-logo"/></svg>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#destinations">Destinations</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Contact us <span class="arr">→</span></a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============================ MOBILE MENU ============================ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mm-backdrop" data-mm-close></div>
+  <nav class="mm-panel" aria-label="Mobile">
+    <div class="mm-head">
+      <svg class="mm-logo" viewBox="0 0 503 124" role="img" aria-label="Scancoming — Destination Management"><use href="#sc-logo"/></svg>
+      <button class="mm-close" data-mm-close aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mm-links">
+      <a href="#about" data-mm-close>About</a>
+      <a href="#destinations" data-mm-close>Destinations</a>
+      <a href="#contact" data-mm-close>Contact</a>
+    </div>
+    <div class="mm-cta">
+      <a class="btn btn-amber" href="#contact" data-mm-close>Contact us <span class="arr">→</span></a>
+    </div>
+  </nav>
+</div>
+
+<!-- ============================ 1 · SHORT DESCRIPTION (hero) ============================ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-photo" id="heroPhoto">
+      <div class="hero-grain"></div>
+    </div>
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+
+    <svg class="route-svg" id="routeSvg" viewBox="785 185 555 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <!-- routes (points ≈ capitals, roughly to scale) -->
+      <path class="path p1" d="M821 361 Q 806 326 833 292"/>
+      <path class="path p2" d="M833 292 Q 868 238 926 218"/>
+      <path class="path p3" d="M821 361 Q 862 422 926 464"/>
+      <path class="path p4" d="M926 464 Q 978 446 1030 462"/>
+      <path class="path p5" d="M926 218 Q 1004 318 1030 462"/>
+      <path class="path p6" d="M1030 462 Q 1106 452 1182 498"/>
+      <path class="path p7" d="M1182 498 Q 1208 458 1201 415"/>
+      <path class="path p8" d="M1182 498 Q 1224 520 1243 566"/>
+      <!-- light pulses relaying through the network -->
+      <path class="pulse" d="M821 361 Q 806 326 833 292" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="2.0s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M833 292 Q 868 238 926 218" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="2.6s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M821 361 Q 862 422 926 464" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="2.0s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M926 464 Q 978 446 1030 462" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="2.9s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M926 218 Q 1004 318 1030 462" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="3.4s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M1030 462 Q 1106 452 1182 498" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="3.9s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M1182 498 Q 1208 458 1201 415" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="4.8s" repeatCount="indefinite"/></path>
+      <path class="pulse" d="M1182 498 Q 1224 520 1243 566" pathLength="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="5s" begin="4.8s" repeatCount="indefinite"/></path>
+      <!-- countries -->
+      <g class="city c1"><circle class="dot" cx="821" cy="361" r="4.6"/><circle class="ring" cx="821" cy="361" r="4"><animate attributeName="r" values="4;16" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" repeatCount="indefinite"/></circle><text x="821" y="386" text-anchor="middle">Ireland</text></g>
+      <g class="city c2"><circle class="dot" cx="833" cy="292" r="4"/><circle class="ring" cx="833" cy="292" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="0.4s" repeatCount="indefinite"/></circle><text x="833" y="273" text-anchor="middle">N. Ireland</text></g>
+      <g class="city c3"><circle class="dot" cx="926" cy="218" r="4"/><circle class="ring" cx="926" cy="218" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="0.8s" repeatCount="indefinite"/></circle><text x="926" y="199" text-anchor="middle">Scotland</text></g>
+      <g class="city c4"><circle class="dot" cx="926" cy="464" r="4"/><circle class="ring" cx="926" cy="464" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="1.2s" repeatCount="indefinite"/></circle><text x="926" y="490" text-anchor="middle">Wales</text></g>
+      <g class="city c5"><circle class="dot" cx="1030" cy="462" r="4.6"/><circle class="ring" cx="1030" cy="462" r="4"><animate attributeName="r" values="4;16" dur="2.6s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="1.6s" repeatCount="indefinite"/></circle><text x="1030" y="488" text-anchor="middle">England</text></g>
+      <g class="city c6"><circle class="dot" cx="1182" cy="498" r="4.6"/><circle class="ring" cx="1182" cy="498" r="4"><animate attributeName="r" values="4;16" dur="2.6s" begin="2.0s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="2.0s" repeatCount="indefinite"/></circle><text x="1168" y="524" text-anchor="end">Belgium</text></g>
+      <g class="city c7"><circle class="dot" cx="1201" cy="415" r="4"/><circle class="ring" cx="1201" cy="415" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="2.4s" repeatCount="indefinite"/></circle><text x="1201" y="396" text-anchor="middle">Netherlands</text></g>
+      <g class="city c8"><circle class="dot" cx="1243" cy="566" r="4"/><circle class="ring" cx="1243" cy="566" r="4"><animate attributeName="r" values="4;14" dur="2.6s" begin="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.6s" begin="2.8s" repeatCount="indefinite"/></circle><text x="1258" y="570" text-anchor="start">Luxembourg</text></g>
+    </svg>
+  </div>
+  <div class="hero-inner" id="about">
+    <div class="wrap">
+      <svg class="hero-logo reveal" viewBox="0 0 503 124" role="img" aria-label="Scancoming — Destination Management"><use href="#sc-logo"/></svg>
+      <span class="eyebrow hero-eyebrow reveal">Destination management · since 1977</span>
+      <h1 class="reveal" data-d="1">Your people on the ground, <span class="serif-accent">wherever</span> your events or trips take you.</h1>
+      <svg class="swoosh reveal" data-d="1" viewBox="0 0 340 12" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 2 Q170 0 340 2 L330 10 Q170 8 10 10 Z"/></svg>
+      <p class="hero-sub reveal" data-d="2">Scancoming is a locally-based destination management company for corporate meetings, incentives and tailor-made tours in England, Scotland, Wales, Ireland, Northern Ireland, Belgium, the Netherlands and Luxembourg. We do the research, planning and bookings — you get one expert point of contact.</p>
+      <div class="hero-actions reveal" data-d="3">
+        <a class="btn btn-amber" href="#contact">Contact us <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#destinations">Explore destinations</a>
+      </div>
+      <div class="hero-meta reveal" data-d="3">
+        <div class="hm"><b>Since 1977</b><span>On-the-ground experts</span></div>
+        <div class="hm"><b>8 countries</b><span>One partner</span></div>
+        <div class="hm"><b>Full service</b><span>Research to booking</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============================ 2 · DESTINATIONS ============================ -->
+<section class="section regions" id="destinations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Destinations</span>
+      <h2>Eight countries, one team that knows them inside out.</h2>
+      <p>Local knowledge and local relationships in every country we cover — the difference between a booking and a programme that actually works.</p>
+    </div>
+    <div class="region-grid dest-grid">
+
+      <a class="region-card reveal" href="destinations/england/">
+        <div class="region-photo"><div class="ph ph-london"><div class="ph-tex"></div></div><img class="region-img" src="assets/uk-london.jpg" alt="London — Houses of Parliament and Big Ben at dusk" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">01 — England</span>
+        <div class="region-body">
+          <h3>England</h3>
+          <div class="region-cities">London · Oxford · Bath</div>
+          <p>Corporate meetings, incentives and tours from London to the Cotswolds.</p>
+          <span class="region-link">Explore England <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="1" href="destinations/netherlands/">
+        <div class="region-photo"><div class="ph ph-london"><div class="ph-tex"></div></div><img class="region-img" src="assets/netherlands-amsterdam.jpg" alt="Amsterdam — canal houses along a city canal" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">02 — Netherlands</span>
+        <div class="region-body">
+          <h3>Netherlands</h3>
+          <div class="region-cities">Amsterdam · Rotterdam · The Hague</div>
+          <p>Meetings and tours handled on the ground, from the canals to the coast.</p>
+          <span class="region-link">Explore the Netherlands <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="2" href="destinations/belgium/">
+        <div class="region-photo"><div class="ph ph-benelux"><div class="ph-tex"></div></div><img class="region-img" src="assets/benelux-ghent.jpeg" alt="Ghent — historic guild houses along the Graslei canal" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">03 — Belgium</span>
+        <div class="region-body">
+          <h3>Belgium</h3>
+          <div class="region-cities">Brussels · Bruges · Ghent</div>
+          <p>From EU-capital conferences to canal-side incentives in Flanders.</p>
+          <span class="region-link">Explore Belgium <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="3" href="destinations/ireland/">
+        <div class="region-photo"><div class="ph ph-ireland"><div class="ph-tex"></div></div><img class="region-img" src="assets/ireland-dublin.webp" alt="Dublin — O’Connell Bridge over the River Liffey" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">04 — Republic of Ireland</span>
+        <div class="region-body">
+          <h3>Republic of Ireland</h3>
+          <div class="region-cities">Dublin · Galway · Cork</div>
+          <p>Incentives, city breaks and events from Dublin to the Wild Atlantic Way.</p>
+          <span class="region-link">Explore Ireland <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" href="destinations/scotland/">
+        <div class="region-photo"><div class="ph ph-benelux"><div class="ph-tex"></div><span class="ph-label">Photo — Scotland</span></div></div>
+        <span class="region-tag">05 — Scotland</span>
+        <div class="region-body">
+          <h3>Scotland</h3>
+          <div class="region-cities">Edinburgh · Glasgow · Highlands</div>
+          <p>Capital-city events, castles and incentive trips into the Highlands.</p>
+          <span class="region-link">Explore Scotland <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="1" href="destinations/luxembourg/">
+        <div class="region-photo"><div class="ph ph-ireland"><div class="ph-tex"></div></div><img class="region-img" src="assets/luxembourg-city.jpg" alt="Luxembourg City — old town above the Alzette valley" loading="lazy" onerror="this.remove()" /></div>
+        <span class="region-tag">06 — Luxembourg</span>
+        <div class="region-body">
+          <h3>Luxembourg</h3>
+          <div class="region-cities">Luxembourg City · Moselle · Vianden</div>
+          <p>A small country that punches far above its size for meetings and events.</p>
+          <span class="region-link">Explore Luxembourg <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="2" href="destinations/wales/">
+        <div class="region-photo"><div class="ph ph-london"><div class="ph-tex"></div><span class="ph-label">Photo — Wales</span></div></div>
+        <span class="region-tag">07 — Wales</span>
+        <div class="region-body">
+          <h3>Wales</h3>
+          <div class="region-cities">Cardiff · Snowdonia · Pembrokeshire</div>
+          <p>City venues in Cardiff and outdoor programmes in the national parks.</p>
+          <span class="region-link">Explore Wales <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="region-card reveal" data-d="3" href="destinations/northern-ireland/">
+        <div class="region-photo"><div class="ph ph-benelux"><div class="ph-tex"></div><span class="ph-label">Photo — Northern Ireland</span></div></div>
+        <span class="region-tag">08 — Northern Ireland</span>
+        <div class="region-body">
+          <h3>Northern Ireland</h3>
+          <div class="region-cities">Belfast · Causeway Coast</div>
+          <p>Belfast venues and day trips along the Causeway Coast, run by our Ireland team.</p>
+          <span class="region-link">Explore Northern Ireland <span class="arr">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3 · CONTACT ============================ -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Tell us where you're going.</h2>
+      <p>Reach the team for your destination directly, or send a brief and we'll route it to the right experts.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="office reveal">
+        <div class="office-flag"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="7"/></svg></div>
+        <h3>United Kingdom</h3>
+        <ul class="office-countries" aria-label="Countries covered">
+          <li>England</li><li>Scotland</li><li>Wales</li>
+        </ul>
+        <div class="office-rows">
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l1 5-2.5 1.5a12 12 0 005 5L14 13l5 1v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><a href="tel:+442079350101">+44 20 7935 0101</a></div>
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span><a href="mailto:reservations@scancoming.co.uk">reservations@scancoming.co.uk</a></div>
+        </div>
+      </div>
+
+      <div class="office reveal" data-d="1">
+        <div class="office-flag"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="20" height="40" fill="#169B62"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#FF883E"/></svg></div>
+        <h3>Ireland</h3>
+        <ul class="office-countries" aria-label="Countries covered">
+          <li>Republic of Ireland</li><li>Northern Ireland</li>
+        </ul>
+        <div class="office-rows">
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l1 5-2.5 1.5a12 12 0 005 5L14 13l5 1v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><a href="tel:+35318719404">+353 1 871 94 04</a></div>
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span><a href="mailto:reservations@scancoming.ie">reservations@scancoming.ie</a></div>
+        </div>
+      </div>
+
+      <div class="office reveal" data-d="2">
+        <div class="office-flags">
+          <div class="office-flag" title="Belgium"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="20" height="40" fill="#000"/><rect x="20" width="20" height="40" fill="#FAE042"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg></div>
+          <div class="office-flag" title="Netherlands"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="60" height="13.33" fill="#AE1C28"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#21468B"/></svg></div>
+          <div class="office-flag" title="Luxembourg"><svg viewBox="0 0 60 40" width="60" height="40"><rect width="60" height="13.33" fill="#ED2939"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#00A1DE"/></svg></div>
+        </div>
+        <h3>Benelux</h3>
+        <ul class="office-countries" aria-label="Countries covered">
+          <li>Belgium</li><li>Netherlands</li><li>Luxembourg</li>
+        </ul>
+        <div class="office-rows">
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l1 5-2.5 1.5a12 12 0 005 5L14 13l5 1v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><a href="tel:+32470297498">+32 470 29 74 98</a></div>
+          <div class="orow"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span><a href="mailto:reservations@scancoming.be">reservations@scancoming.be</a></div>
+        </div>
+      </div>
+
+    </div>
+
+<div class="contact-cta reveal">
+      <div class="cc-text">
+        <h3>Have a brief? Let's get started.</h3>
+        <p>Pick your destination and send us the goal, the group and the dates. We'll come back fast with a tailor-made plan.</p>
+      </div>
+      <div class="cc-actions">
+        <button type="button" class="btn btn-amber" id="enquiryBtn">Send an enquiry <span class="arr">→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENQUIRY DESTINATION PICKER ============================ -->
+<div class="enquiry-modal" id="enquiryModal" aria-hidden="true">
+  <div class="enquiry-backdrop" data-close></div>
+  <div class="enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enqTitle">
+    <button class="enquiry-close" data-close aria-label="Close">&times;</button>
+    <span class="eyebrow">One last thing</span>
+    <h3 id="enqTitle">Where is your trip or event?</h3>
+    <p>Pick the destination — we'll open a pre-filled email to the team for that country.</p>
+    <div class="enquiry-choices">
+      <button type="button" class="enquiry-choice" data-office="reservations@scancoming.co.uk" data-region="the United Kingdom">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="7"/></svg></span>
+        <span class="ec-text"><b>United Kingdom</b></span>
+        <span class="arr">→</span>
+      </button>
+      <button type="button" class="enquiry-choice" data-office="reservations@scancoming.ie" data-region="Ireland">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="20" height="40" fill="#169B62"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#FF883E"/></svg></span>
+        <span class="ec-text"><b>Ireland</b></span>
+        <span class="arr">→</span>
+      </button>
+      <button type="button" class="enquiry-choice" data-office="reservations@scancoming.be" data-region="Belgium">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="20" height="40" fill="#000"/><rect x="20" width="20" height="40" fill="#FAE042"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg></span>
+        <span class="ec-text"><b>Belgium</b></span>
+        <span class="arr">→</span>
+      </button>
+      <button type="button" class="enquiry-choice" data-office="reservations@scancoming.be" data-region="the Netherlands">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#AE1C28"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#21468B"/></svg></span>
+        <span class="ec-text"><b>Netherlands</b></span>
+        <span class="arr">→</span>
+      </button>
+      <button type="button" class="enquiry-choice" data-office="reservations@scancoming.be" data-region="Luxembourg">
+        <span class="flag"><svg viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#ED2939"/><rect y="13.33" width="60" height="13.34" fill="#fff"/><rect y="26.67" width="60" height="13.33" fill="#00A1DE"/></svg></span>
+        <span class="ec-text"><b>Luxembourg</b></span>
+        <span class="arr">→</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="" aria-label="Scancoming home">
+          <svg class="brand-logo" viewBox="0 0 503 124" role="img" aria-label="Scancoming — Destination Management"><use href="#sc-logo"/></svg>
+        </a>
+        <p class="footer-blurb">A destination management company and your locally-based travel partner across England, Scotland, Wales, Ireland, Northern Ireland and the Benelux.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Destinations</h3>
+        <ul>
+          <li><a href="destinations/england/">England</a></li>
+          <li><a href="destinations/netherlands/">Netherlands</a></li>
+          <li><a href="destinations/belgium/">Belgium</a></li>
+          <li><a href="destinations/ireland/">Ireland</a></li>
+          <li><a href="destinations/scotland/">Scotland</a></li>
+          <li><a href="destinations/luxembourg/">Luxembourg</a></li>
+          <li><a href="destinations/wales/">Wales</a></li>
+          <li><a href="destinations/northern-ireland/">Northern Ireland</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="services/meetings-incentives/">Meetings &amp; Incentives</a></li>
+          <li><a href="services/tours-city-breaks/">Tours &amp; City Breaks</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="faq/">FAQ</a></li>
+          <li><a href="guides/what-is-a-dmc/">What is a DMC?</a></li>
+          <li><a href="guides/how-to-choose-a-dmc/">How to choose a DMC</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scancoming. All rights reserved. · Privacy Policy</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3c-2 0-3.5 1.6-3.5 3.6V11H8v3.5h2.5V22H14v-7.5h2.6l.4-3.5H14V9.4c0-.3.2-.4.5-.4Z"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.5 21h-5.4l-4.2-5.5L7 21H4l7-8L3.5 3H9l3.8 5L17.5 3Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- sticky header ---------- */
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ---------- scroll reveal ---------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* hero content is in view on load — reveal it immediately (staggered) so it never sticks hidden */
+requestAnimationFrame(()=>{
+  document.querySelectorAll('.hero .reveal').forEach(el=>{ io.unobserve(el); el.classList.add('in'); });
+});
+
+/* failsafe: ensure nothing ever stays hidden */
+window.addEventListener('load', ()=>{ setTimeout(()=>{
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+    const r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight) el.classList.add('in');
+  });
+}, 1500); });
+
+/* ---------- hero parallax ---------- */
+const heroPhoto = document.getElementById('heroPhoto');
+let ticking=false;
+window.addEventListener('scroll', ()=>{
+  if(ticking) return;
+  ticking=true;
+  requestAnimationFrame(()=>{
+    const y = window.scrollY;
+    if(y < window.innerHeight){ heroPhoto.style.transform = `translateY(${y*0.18}px) scale(1.06)`; }
+    ticking=false;
+  });
+}, {passive:true});
+
+/* ---------- focus trap (mobile menu + modal) ---------- */
+function trapFocus(container, e){
+  if(e.key !== 'Tab') return;
+  const focusables = container.querySelectorAll('a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  if(!focusables.length) return;
+  const first = focusables[0], last = focusables[focusables.length-1];
+  if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+}
+
+/* ---------- mobile menu drawer ---------- */
+(function(){
+  const btn = document.querySelector('.menu-btn');
+  const menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+  function open(){ menu.classList.add('open'); menu.setAttribute('aria-hidden','false');
+    btn.setAttribute('aria-expanded','true'); document.body.classList.add('menu-open');
+    document.addEventListener('keydown', onKey);
+    const closeBtn = menu.querySelector('.mm-close'); if(closeBtn) closeBtn.focus(); }
+  function close(){ menu.classList.remove('open'); menu.setAttribute('aria-hidden','true');
+    btn.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open');
+    document.removeEventListener('keydown', onKey); btn.focus(); }
+  function onKey(e){ if(e.key === 'Escape') close(); trapFocus(menu, e); }
+  btn.addEventListener('click', open);
+  menu.querySelectorAll('[data-mm-close]').forEach(el=> el.addEventListener('click', close));
+})();
+
+/* ---------- enquiry office picker (ask after Send) ---------- */
+(function(){
+  const btn = document.getElementById('enquiryBtn');
+  const modal = document.getElementById('enquiryModal');
+  if(!btn || !modal) return;
+  const choices = modal.querySelectorAll('.enquiry-choice');
+
+  function buildMailto(office, region){
+    const subject = encodeURIComponent('Enquiry — ' + region);
+    const body = encodeURIComponent(
+      'Hi Scancoming team,\r\n\r\n' +
+      'Destination: ' + region + '\r\n\r\n' +
+      'Goal/brief: \r\nGroup size: \r\nDates: \r\nBudget: \r\n\r\nThanks,'
+    );
+    return 'mailto:' + office + '?subject=' + subject + '&body=' + body;
+  }
+  function open(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.addEventListener('keydown', onKey);
+    if(choices.length) choices[0].focus(); }
+  function close(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.removeEventListener('keydown', onKey); btn.focus(); }
+  function onKey(e){ if(e.key === 'Escape') close(); trapFocus(modal, e); }
+
+  btn.addEventListener('click', open);
+  modal.querySelectorAll('[data-close]').forEach(el=> el.addEventListener('click', close));
+  choices.forEach(c=>{
+    c.addEventListener('click', ()=>{
+      window.location.href = buildMailto(c.dataset.office, c.dataset.region);
+      close();
+    });
+  });
+})();
+</script>
+
+<script>
+/* ---------- hero animations (approved set) ---------- */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* headline word cascade — preserves styled spans */
+  const h1=document.querySelector('.hero h1');
+  if(h1){h1.classList.remove('reveal');h1.classList.add('in');
+    let i=0, out='';
+    h1.childNodes.forEach(n=>{
+      const cls=n.nodeType===1?n.className:'';
+      n.textContent.split(/\s+/).filter(Boolean).forEach(w=>{
+        out+='<span class="w"><span'+(cls?' class="'+cls+'"':'')+' style="--wd:'+(0.25+i*0.055).toFixed(3)+'s">'+w+'</span></span> ';
+        i++;});
+    });
+    h1.innerHTML=out.trim();}
+
+  /* count-up numbers in hero meta */
+  document.querySelectorAll('.hero-meta .hm b').forEach(el=>{
+    const m=el.textContent.match(/\d+/); if(!m) return;
+    const target=+m[0], tpl=el.textContent, start=target>100?target-77:0, dur=1800, t0=performance.now();
+    const tick=t=>{const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+      el.textContent=tpl.replace(m[0], String(Math.round(start+(target-start)*e)));
+      if(p<1) requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);
+  });
+
+  if(!matchMedia('(hover: hover)').matches) return;
+
+  /* magnetic buttons */
+  document.querySelectorAll('.btn').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      b.style.transform='translate('+(x*14).toFixed(1)+'px,'+(y*10).toFixed(1)+'px)';});
+    b.addEventListener('mouseleave',()=>{b.style.transform='';});
+  });
+
+  /* 3D tilt on cards */
+  document.querySelectorAll('.region-card,.service-card,.office').forEach(c=>{
+    c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c.style.transition='transform .08s linear';
+      c.style.transform='perspective(900px) rotateX('+(-y*6).toFixed(2)+'deg) rotateY('+(x*8).toFixed(2)+'deg) translateY(-6px)';});
+    c.addEventListener('mouseleave',()=>{c.style.transition='transform .6s var(--ease)';c.style.transform='';});
+  });
+})();
+</script>
+</body>
+</html>
