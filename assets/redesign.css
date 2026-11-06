@@ -29,8 +29,8 @@
 .logo-sub { fill: var(--color-logo-sub); }
 .logo { display: block; height: 44px; width: auto; }
 img.logo { min-width: 0; object-fit: contain; object-position: left center; }
-.nav-bar .logo { height: 60px; }
-.mm-head .logo { height: 36px; }
+.nav-bar .logo { height: 50px; }
+.mm-head .logo { height: 30px; }
 
 /* ---------- nav ---------- */
 .nav-bar { position: sticky; top: 0; z-index: var(--z-sticky-nav); background: var(--color-paper); border-bottom: var(--rule-hair) solid transparent; transition: border-color var(--dur-short) var(--ease-out); }
@@ -59,9 +59,9 @@ html:not(.js) .hero__toggle { display: none; }
 html:not(.js) .hero__bar { padding-right: var(--space-md); }
 .hero__base { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-xl) var(--gap-columns); align-items: end; padding-block: var(--space-xl); }
 .hero h1 { max-width: none; line-height: 1.02; }
-.swoosh { width: min(100%, 420px); height: 12px; margin-top: var(--space-md); color: var(--color-accent); }
+.swoosh { width: min(100%, 420px); height: 10px; margin-top: var(--space-md); color: var(--color-accent); }
 .swoosh path { fill: currentColor; }
-.dest .swoosh, .contact .swoosh { width: min(100%, 300px); height: 10px; }
+.dest .swoosh, .contact .swoosh { width: min(100%, 300px); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
 
 /* ---------- about ---------- */
@@ -192,7 +192,7 @@ html:not(.js) [data-loop-toggle] { display: none; }
 }
 @media (max-width: 40rem) {
   .logo { height: 36px; }
-  .nav-bar .logo { height: 44px; }
+  .nav-bar .logo { height: 40px; }
   .dest__grid { grid-template-columns: minmax(0, 1fr); }
   .facts { grid-template-columns: minmax(0, 1fr); }
   .facts > div { padding: var(--space-sm) 0; border-left: 0; border-top: var(--rule-hair) solid var(--color-rule-strong); }
