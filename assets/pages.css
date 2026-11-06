@@ -108,3 +108,24 @@ a.service-card:hover h3, a.place-card:hover h3 { color: var(--color-accent-deep)
 @media (prefers-reduced-motion: reduce) {
   .plus, .service-card h3, .place-card h3 { transition: none; }
 }
+
+/* Company information */
+.legal-intro { margin-top: var(--space-md); color: var(--color-ink-2); }
+.legal-entity { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-lg) var(--gap-columns); padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule-strong); }
+.legal-entity:first-child { padding-top: 0; border-top: 0; }
+.legal-entity:last-child { padding-bottom: 0; }
+.legal-entity h2 { font-size: var(--text-2xl); }
+.legal-list { margin: 0; }
+.legal-list > div { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xs) var(--gap-columns); padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.legal-list > div:first-child { padding-top: 0; }
+.legal-list dt { color: var(--color-muted); }
+.legal-list dd { margin: 0; overflow-wrap: anywhere; }
+.legal-list a { color: var(--color-accent-deep); text-underline-offset: 0.2em; }
+.legal-list mark { padding-inline: var(--space-2xs); background: var(--color-paper-3); color: var(--color-ink); }
+.legal-note { margin-bottom: var(--space-md); color: var(--color-ink-2); }
+@media (max-width: 62rem) {
+  .legal-entity { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 40rem) {
+  .legal-list > div { grid-template-columns: minmax(0, 1fr); }
+}
