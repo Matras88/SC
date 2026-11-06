@@ -1,0 +1,13 @@
+/* Colour trial for redesign-blue.html: the logo's navy replaces the near-black ink. Everything else stays as redesign.css. */
+:root {
+  --color-ink: #1D3557;
+  --color-ink-2: #2E4566;
+  --color-muted: #56637A;
+}
+.logo { height: 60px; }
+.footer .logo { height: 72px; }
+@media (max-width: 47.99rem) {
+  .logo { height: 44px; }
+  .footer .logo { height: 52px; }
+}
+img.logo { object-fit: contain; object-position: left center; }
