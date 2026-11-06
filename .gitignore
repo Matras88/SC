@@ -1,5 +1,11 @@
 .claude/
 Scancoming-website-briefing.docx
+Scancoming-website-copy.docx
 
 # local scratch copy — the published light concept lives at light/index.html
 index-light.html
+
+# local working files: Hallmark scan output, full-size photo originals, copy review list
+.hallmark/
+source-photos/
+copy-changes.md
