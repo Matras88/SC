@@ -2,6 +2,11 @@
 
 /* ---------- nav hairline once scrolled ---------- */
 const header = document.getElementById('header');
+const setToggle = (btn, held, label) => {
+  btn.classList.toggle('is-held', held);
+  btn.setAttribute('aria-label', label);
+  btn.title = label;
+};
 const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
 onScroll();
 window.addEventListener('scroll', onScroll, {passive:true});
@@ -71,7 +76,7 @@ document.querySelectorAll('[data-loop]').forEach((el) => {
   const s = { seen: false, hover: false, focus: false, held: matchMedia('(prefers-reduced-motion: reduce)').matches };
   const sync = () => {
     el.classList.toggle('is-running', s.seen && !s.hover && !s.focus && !s.held);
-    btn.textContent = s.held ? 'Play the map' : 'Pause the map';
+    setToggle(btn, s.held, s.held ? 'Play the map' : 'Pause the map');
   };
   btn.addEventListener('click', () => { s.held = !s.held; sync(); });
   [['pointerenter', 'hover', true], ['pointerleave', 'hover', false], ['focusin', 'focus', true], ['focusout', 'focus', false]]
@@ -115,7 +120,7 @@ document.querySelectorAll('[data-loop]').forEach((el) => {
   if(document.readyState === 'complete') load(); else window.addEventListener('load', load, {once:true});
   setInterval(next, INTERVAL);
 
-  btn.addEventListener('click', ()=>{ s.held = !s.held; s.hover = false; btn.textContent = s.held ? 'Play photos' : 'Pause photos'; });
+  btn.addEventListener('click', ()=>{ s.held = !s.held; s.hover = false; setToggle(btn, s.held, s.held ? 'Play photos' : 'Pause photos'); });
   fig.addEventListener('pointerenter', ()=>{ s.hover = true; });
   fig.addEventListener('pointerleave', ()=>{ s.hover = false; });
   fig.addEventListener('focusin', (e)=>{ if(e.target !== btn) s.focus = true; });

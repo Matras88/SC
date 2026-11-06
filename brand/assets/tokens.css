@@ -9,7 +9,7 @@
   --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
   --color-paper: #FAF8F4; --color-paper-2: #F1ECE2; --color-paper-3: #E7E1D6;
-  --color-ink: #1E2430; --color-ink-2: #2B3340; --color-muted: #5C6069; --color-logo-sub: #6B6F78;
+  --color-ink: #1D3557; --color-ink-2: #2E4566; --color-muted: #56637A; --color-logo-sub: #65738A;
   --color-rule: #E7E1D6; --color-rule-strong: #CFC7B8;
   --color-accent: #C8202A; --color-accent-deep: #A81A23; --color-accent-ink: #FBF9F5; --color-focus: #C8202A;
   --font-display: "Cormorant Garamond", Georgia, serif; --font-body: "Outfit", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-body);
