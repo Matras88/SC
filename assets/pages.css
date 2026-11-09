@@ -129,3 +129,12 @@ a.service-card:hover h3, a.place-card:hover h3 { color: var(--color-accent-deep)
 @media (max-width: 40rem) {
   .legal-list > div { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Photo gallery with credits */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); margin-bottom: var(--space-2xl); }
+.gallery__item { margin: 0; }
+.gallery__frame { aspect-ratio: 1 / 1; }
+.gallery__credit { display: block; margin-top: var(--space-3xs); font-size: var(--text-xs); }
+@media (max-width: 60rem) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
