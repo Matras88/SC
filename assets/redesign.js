@@ -46,13 +46,7 @@ function trapFocus(container, e){
   const choices = modal.querySelectorAll('.enquiry-choice');
 
   function buildMailto(office, region){
-    const subject = encodeURIComponent('Enquiry: ' + region);
-    const body = encodeURIComponent(
-      'Hi Scancoming team,\r\n\r\n' +
-      'Destination: ' + region + '\r\n\r\n' +
-      'Goal/brief: \r\nGroup size: \r\nDates: \r\nBudget: \r\n\r\nThanks,'
-    );
-    return 'mailto:' + office + '?subject=' + subject + '&body=' + body;
+    return 'mailto:' + office + '?subject=' + encodeURIComponent('Enquiry: ' + region);
   }
   function open(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.addEventListener('keydown', onKey);
     if(choices.length) choices[0].focus(); }
