@@ -212,3 +212,11 @@ html:not(.js) [data-loop-toggle] { display: none; }
   .hero__photo > img { transition: none; }
   .btn, .enquiry-modal, .mm-panel, .mm-backdrop, .nav-bar, .card h3 { transition: none; }
 }
+
+/* Wide screens: larger logos, so the thin serifs and small lettering get enough pixels.
+   63px top and 66px footer put the red line on whole pixels; the 87px bar centres the logo on a whole pixel. */
+@media (min-width: 90rem) {
+  :root { --nav-height: 87px; }
+  .nav-bar .logo { height: 63px; }
+  .footer .logo { height: 66px; }
+}
