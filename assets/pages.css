@@ -135,8 +135,10 @@ a.service-card:hover h3, a.place-card:hover h3 { color: var(--color-accent-deep)
 .gallery__item { margin: 0; }
 .gallery__frame { aspect-ratio: 1 / 1; }
 .gallery__credit { display: block; margin-top: var(--space-3xs); font-size: var(--text-xs); }
+.gallery--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 60rem) {
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Five services on the country pages */
