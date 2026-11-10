@@ -112,6 +112,7 @@ html:not(.js) .hero__bar { padding-right: var(--space-md); }
 .office__countries { margin: 0; color: var(--color-ink-2); }
 .office a { color: var(--color-ink); overflow-wrap: anywhere; text-underline-offset: 0.2em; }
 .office a:hover { color: var(--color-accent-deep); }
+.office__phone { color: var(--color-ink); }
 .enquire { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--gap-columns); align-items: end; margin-top: var(--space-3xl); }
 .enquire h3 { max-width: none; font-size: var(--text-section); }
 .enquire p { margin-top: var(--space-md); max-width: 52ch; color: var(--color-ink-2); }
@@ -224,3 +225,5 @@ html:not(.js) [data-loop-toggle] { display: none; }
   .nav-bar .logo { height: 63px; }
   .footer .logo { height: 66px; }
 }
+/* Footer list items without a page of their own */
+.footer__top li:not(:has(a)) { color: var(--color-muted); }
